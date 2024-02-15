@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light sidebar" id="top-aligned-nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <div class="sidebar-sticky">
+                    <h1>Dashboard</h1>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Notifications</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Accounts</a></li>
+                    </ul>            
+                    <div class="profile-picture">
+                        <img src="/images/profile.jpeg" alt="Profile Picture">
+                        <a href="/signout">Sign out</a>
+                    </div>
+                </div>
+            </div>
+        
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="dashboard-content">
+            <div class="search">
+                <form class="search-form form-inline ml-auto">
+                <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search..." aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 search-button" type="submit">
+                    <img src="/images/search.png" alt="Search">
+                </button>
+                </form>
+            </div>
+            <div class="dashboard-icon">
+                <div class="row">
+                    <div class="item">
+                        <p class="number">10</p>
+                        <img src="/assets/users-svgrepo-com.svg" alt="Users">
+                        <p>Users</p>
+                    </div>
+                    <div class="item">
+                        <p class="number">5</p>
+                        <img src="/assets/notifications-alert-svgrepo-com.svg" alt="Notifications">
+                        <p>Notifications</p>
+                    </div>
+                    <div class="item">
+                        <p class="number">3</p>
+                        <img src="/assets/comments-svgrepo-com.svg" alt="Messages">
+                        <p>Messages</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <img src="/assets/account-circle-svgrepo-com.svg" alt="Accounts">
+                        <p>Accounts</p>
+                    </div>
+                    <div class="item">
+                        <img src="/assets/piece-of-paper-and-pencil-svgrepo-com.svg" alt="Blogs">
+                        <p>Blogs text</p>
+                    </div>
+                    <div class="item invisible"></div>
+                </div>
+            </div>
+            <div class="weekly-post">
+                <h1>See weekly Blog Post </h1>
+                <div class="post">
+                    <i class="fas fa-chevron-left"></i>
+                        <div class="post-content">
+                            <img src="/images/profile.jpeg" alt="Post 1">
+                            <div class="post-descrption">
+                                <div>
+                                    <h2>Algorithm and Data structure</h2>
+                                    <p>By Celse Honore RUGIRA</p>
+                                </div>
+                                
+                                <div class="blog-time">
+                                    <img src="/assets/Time.svg" alt="" srcset="">
+                                    <p>Posted on <span>February 2, 2024</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <img src="/images/profile.jpeg" alt="Post 1">
+                            <div class="post-descrption">
+                                <div>
+                                    <h2>Algorithm and Data structure</h2>
+                                    <p>By Celse Honore RUGIRA</p>
+                                </div>
+                                
+                                <div class="blog-time">
+                                    <img src="/assets/Time.svg" alt="" srcset="">
+                                    <p>Posted on <span>February 2, 2024</span></p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="post-content">
+                            <img src="/images/profile.jpeg" alt="Post 1">
+                            <div class="post-descrption">
+                                <div>
+                                    <h2>Algorithm and Data structure</h2>
+                                    <p>By Celse Honore RUGIRA</p>
+                                </div>
+                                
+                                <div class="blog-time">
+                                    <img src="/assets/Time.svg" alt="" srcset="">
+                                    <p>Posted on <span>February 2, 2024</span></p>
+                                </div>
+                            </div>
+                        </div> 
+
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

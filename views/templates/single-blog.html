@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Blog Post</title>
+  <link rel="stylesheet" href="/styles/single-blog.css">
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="back-button back-arrow">Back</a>
+    <h1>Algorithm and Data Structure</h1>
+    <div class="author">By Celse Honore RUGIRA</div>
+    <div class="date">Posted on February 2, 2024</div>
+  </header>
+
+  <div class="content">
+    <div class="author-info">
+      <img class="blog-profile" src="/images/profile.jpeg" alt="Author Profile">
+      <div class="social-links">
+        <a href="#"><img src="/assets/icon-instagram.svg" alt="instagram"></a>
+        <a href="#"><img src="/assets/icon-facebook.svg" alt="facebook"></a>
+        <a href="#"><img src="/assets/icon-linkedin.svg" alt="linkedin"></a>
+      </div>
+      <div class="author-name">Celse Honore RUGIRA</div>
+      <div class="published-date">Posted on February 2, 2024</div>
+    </div>
+    <div class="blog-content">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ut, perspiciatis, nisi repellat explicabo eveniet laborum mollitia aliquid incidunt, illum doloremque dignissimos porro voluptate provident praesentium vel necessitatibus veniam beatae?
+        Harum adipisci facere sequi fugit beatae. Laborum, recusandae, tenetur dignissimos sint adipisci rem voluptates aliquid totam placeat similique nostrum vero molestias eum officia blanditiis enim fugit. Nobis itaque fuga natus.
+        Temporibus perferendis, quia facilis numquam deleniti ratione! Sit cupiditate omnis autem inventore hic praesentium quisquam. Nulla soluta dolorum porro alias sequi explicabo adipisci ea sunt architecto recusandae fugit, quia quo.
+        Impedit labore est inventore minima ipsam neque deserunt aliquid quibusdam nulla aut, error, quod ducimus similique! Voluptatibus possimus exercitationem fuga a repudiandae provident quas tenetur similique nihil voluptate. Unde, ipsa.
+        Vero placeat et eaque atque itaque modi incidunt nulla expedita rerum? Veniam commodi nam necessitatibus dolores modi beatae provident nobis dolore rem, aperiam iusto odit laudantium, fugit quisquam iure quasi?
+        Quas, aperiam. Exercitationem fuga laboriosam facere ipsum voluptatem laudantium aliquid optio, molestias provident deleniti consectetur. Facere itaque omnis, rem, maiores assumenda doloribus commodi optio consequuntur esse aut dicta odit quia!
+      </p>
+      <div class="button-count">
+        <span class="like-count">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="24" height="24">
+            <path fill="none" d="M0 0h24v24H0z" />
+            <image href="/assets/like-placeholder-svgrepo-com.svg" width="25" height="25" />
+          </svg>
+          <span class="like-text">0</span>
+        </span>
+        <span class="comment-count">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25" height="25">
+            <path fill="none" d="M0 0h24v24H0z" />
+            <image href="/assets/comment-right-svgrepo-com.svg" width="20" height="20" />
+          </svg>
+          <span class="comment-text">0</span>
+        </span>
+        <span class="share-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="none" d="M0 0h24v24H0z" />
+            <image href="/assets/share-svgrepo-com.svg" width="22" height="22" />
+          </svg>
+        </span>
+        
+      </div>
+      <footer class="footer">
+        <div class="comments-section">
+          <h2>Comments</h2>
+          <div class="comment">
+            <div class="comment-info">
+              <img class="user-avatar" src="/images/profile.jpeg" alt="User Avatar">
+              <div class="user-name">Celse Honore</div>
+              <div class="comment-date">Posted on <span>February 3, 2024</span></div>
+            </div>
+            <p class="comment-text">Great post! Thanks for sharing.</p>
+            <div class="button-count-reply">
+              <span class="like-count-reply">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <image href="/assets/like-placeholder-svgrepo-com.svg" width="25" height="25" />
+                </svg>
+                <span class="like-text-reply">0</span>
+              </span>
+              <span class="comment-count-reply">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <image href="/assets/comment-right-svgrepo-com.svg" width="20" height="20" /> <!-- Adjust these values -->
+                </svg>
+                <span class="comment-text-reply">0</span>
+            </span>
+            </div>
+            <div class="comment-box">
+              <textarea class="comment-input" placeholder="Add a comment..."></textarea>
+              <button class="post-comment-button">Post Comment</button>
+            </div>
+          </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var likeCount = document.querySelector('.like-count .like-text');
+        var commentCount = document.querySelector('.comment-count .comment-text');
+
+        document.querySelector('.like-count').addEventListener('click', function() {
+            likeCount.textContent = parseInt(likeCount.textContent) + 1;
+        });
+
+        document.querySelector('.comment-count').addEventListener('click', function() {
+            commentCount.textContent = parseInt(commentCount.textContent) + 1;
+        });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+    var likeCountReply = document.querySelector('.like-count-reply .like-text-reply');
+    var commentCountReply = document.querySelector('.comment-count-reply .comment-text-reply');
+
+    document.querySelector('.like-count-reply').addEventListener('click', function() {
+        likeCountReply.textContent = parseInt(likeCountReply.textContent) + 1;
+    });
+
+    document.querySelector('.comment-count-reply').addEventListener('click', function() {
+        commentCountReply.textContent = parseInt(commentCountReply.textContent) + 1;
+    });
+});
+</script>
+</body>
+
+</html>
