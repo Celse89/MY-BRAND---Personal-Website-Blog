@@ -1,0 +1,89 @@
+
+  
+  #top-aligned-nav.navbar {
+    align-items: flex-start !important;
+    background-color: #171C28;
+    color: #f5f5f5;
+  
+  }
+  
+ 
+
+  .sidebar-sticky h1 {
+    margin: 20px 0;
+  }
+  
+  
+  
+  
+  #top-aligned-nav.navbar a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: #F5F5F5;
+  }
+  
+  
+  .nav-item a {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .nav-item a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f5f5f5;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-item a:hover::after {
+    width: 100%;
+    visibility: visible;
+  }
+
+  .profile-picture {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .profile-picture img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .profile-picture a {
+    text-decoration: none;
+    color: #f5f5f5;
+  }
+
+
+  @media (max-width: 768px) {
+    #top-aligned-nav.navbar {
+      display: block; 
+    } 
+  
+    .sidebar-sticky h1 {
+      font-size: 20px;
+    }
+    
+    .sidebar-sticky a {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 768px) {
+    nav .profile-picture {
+      position: static !important;
+      margin-top: 50px;
+    }
+}

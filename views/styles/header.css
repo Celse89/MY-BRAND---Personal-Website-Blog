@@ -1,0 +1,111 @@
+ .nav-bar {
+    background-color: #171C28;
+    height: 80px;
+    padding: 10px 70px;
+ }
+
+ ul {
+    list-style: none;
+ }
+
+
+ .nav-bar a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: #F5F5F5;
+    word-spacing: 0.5em
+ }
+
+ .nav-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    
+ }
+
+
+.nav-bar ul {
+    display: flex;      
+}
+
+.nav-bar ul li {
+    padding: 0 20px;
+    position: relative; /* This is the key */   
+}
+
+.nav-bar ul li:nth-child(1) {
+    padding-left: 0;
+}
+
+.nav-bar ul li a {
+    position: relative;
+}
+
+.nav-bar ul li a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -10px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-bar ul li a:hover:before,
+.nav-bar ul li a.active:before {
+    visibility: visible;
+    width: 100%;
+}
+
+#button {
+    display: inline-block;
+    padding: 13px 20px;
+    background-color: #171C28;
+    color: #F5F5F5;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px; 
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 40px;
+    border: 1px solid #F5F5F5;
+    text-align: center;
+    margin-right: 180px;
+}
+
+.navbar {
+    background-color: red;
+}
+#button {
+    margin-left: auto;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+
+    .navbar-expand-lg > .container-fluid {
+        flex-wrap: nowrap;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+
+#myNavbar {
+    background-color: #171C28 !important;
+}
+
+

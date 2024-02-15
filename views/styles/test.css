@@ -1,0 +1,457 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+body {    
+    background-color: #F5F5F5;
+    font-family: Inter, 'Source Sans Pro';
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.header img {
+    max-width: 400px;
+    height: 20;
+    border-radius: 60%;
+    border: 2px solid #171C28;
+}
+
+h1, h3 {
+    color: #171C28;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+
+.header .container {
+    display: flex;
+    padding: 0 50px;
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+.my-bio h1 {
+    margin: 10px 8px;
+    align-self: center;
+   
+}
+
+.short-bar {
+    height: 50px;
+    width: 10px;
+    background-color: #171C28;
+    
+}
+
+.long-bar {
+    height: 100px;
+    width: 10px;
+    background-color: #171C28;
+    
+}
+
+.header h3 {
+    margin: 10px 8px;
+    
+}
+
+
+
+
+.container-info {
+    padding: 40px;
+}
+
+.container-info p {
+    max-width: 600px;
+    font-size: 20px;
+}
+
+.content {
+    display: flex;
+    padding: 10px 60px; 
+    margin: 40px;
+}
+
+.bar-2 {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+
+.resume {
+    display: inline-block;
+    padding: 16px 20px;
+    background-color: #171C28;
+    color: #F5F5F5;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px; 
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 40px;
+    text-align: center;
+    margin: 40px 40px;
+}
+
+a:hover {
+    background-color: #171C28;
+}
+
+.my-skills {
+    padding: 0 125px;
+    gap: 350px;
+}
+
+.my-skills h3 {
+    color: #171C28;
+    margin-bottom: 50px;
+}
+
+.my-skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-left: auto;
+    max-width: 80%;
+}
+
+.my-skills-container div {
+    flex: 1 0 30%;
+}
+
+
+
+.my-skills-container div img {
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.my-portifolio {
+    padding: 0 125px;
+    gap: 350px;
+}
+
+
+
+.portifolio h3 {
+    color: #f5f5f5;
+}
+
+.my-portifolio-container {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.my-portifolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-left: auto;
+    max-width: 80%;
+}
+
+.my-portifolio .title {
+    color: #171C28;
+    margin-bottom: 50px;
+}
+
+
+.portifolio {
+    background-color: #171C28;
+    color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(40% - 10px); 
+}
+
+.visit-page {
+    border: 1px solid #171C28;
+    padding: 8px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+
+
+.contact {
+    padding: 0 125px;
+}
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-me-container-1 {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-me-container-1 h1 {
+    color: #171C28;
+}
+
+.contact-me-container-1 {
+    background-color: #171C28;
+    border-radius: 10px;
+    color: #f5f5f5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 20px;
+    height: auto; 
+    min-height: 350px; 
+}
+
+.contact-me-container-1 label {
+    display: block;
+}
+
+.contact-me-container-1 input,
+.contact-me-container-1 textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #f5f5f5;
+    color: #f5f5f5;
+    background-color: #171C28;
+    border-radius: 10px;
+}
+
+.contact-me-container-1 form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-me-container-1 form div {
+    width: 48%;
+}
+
+.contact-me-container-1 form div label,
+.contact-me-container-1 form div input {
+    width: 100%;
+}
+
+.contact-me-container-1 textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f5f5f5;
+    color: #f5f5f5;
+    background-color: #171C28;
+}
+
+.contact-me-container-1 input,
+.contact-me-container-1 textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f5f5f5;
+    color: #f5f5f5;
+    background-color: #171C28;
+    border-radius: 10px;
+}
+
+.contact-me-container-1 textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#send-btn {
+    background-color: #171C28;
+    color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#send-btn:hover {
+    background-color: #00c2ff;
+    color: #171C28;
+}
+.subscribe-form {
+    max-width: 600px;
+    margin: auto; 
+    margin-top: 20px;
+
+}
+
+.subscribe-form form div {
+    display: inline-block;
+}
+.subscribe-form form div input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f5f5f5;
+    color: #f5f5f5;
+    background-color: #171C28;
+    border-radius: 10px;
+}
+
+#subscribe-btn {
+    background-color: #171C28;
+    color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 4px;
+    transition: background-color 0.3s ease;
+
+}
+#subscribe-btn:hover {
+    background-color: #00c2ff;
+    color: #171C28;
+}
+section:not(.my-bio) {
+    border-top: 3px solid #D9D9D9;
+    padding-top: 20px; 
+}
+
+
+@media screen and (max-width: 768px) {
+    .header img {
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .header .container {
+        padding: 0 20px;
+    }
+
+    .container-info {
+        padding: 20px;
+    }
+
+    .resume {
+        margin: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 10px;
+        margin: 20px;
+    }
+  
+}
+
+@media screen and (max-width: 768px) {
+    .my-skills {
+        padding: 0 20px; /* Reduce padding on smaller screens */
+        gap: 50px; /* Reduce gap on smaller screens */
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .my-skills-container div {
+        flex: 1 0 calc(33.33% - 8px); /* Arrange 3 items per row on smaller screens */
+    }
+}
+@media screen and (max-width: 768px) {
+    .my-skills-container div img {
+        width: 50%; 
+    }
+  
+}
+
+@media screen and (max-width: 768px) {
+    .my-portifolio {
+        padding: 0 20px; /* Reduce padding on smaller screens */
+        gap: 50px; /* Reduce gap on smaller screens */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .my-portifolio-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .my-portifolio-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .my-portifolio-container .portifolio {
+        width: 90%; /* Adjust as needed */
+        margin-bottom: 20px; /* Adjust as needed */
+        margin-right: auto; /* Adjust as needed */
+    }
+    .visit-page {
+        margin-right: auto;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-me-container-1, .subscribe-form {
+        width: 100%; /* Adjust as needed */
+        margin-bottom: 20px; /* Adjust as needed */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding: 0 20px; /* Reduce padding on smaller screens */
+    }
+
+    .contact-container {
+        gap: 20px; /* Reduce gap on smaller screens */
+    }
+
+    .contact-me-container-1 {
+        max-width: 100%; /* Allow the container to take up the full width on smaller screens */
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .contact-me-container-1 form div {
+        width: 100%; /* Make each form div take up the full width on smaller screens */
+    }
+
+    .contact-me-container-1 textarea {
+        height: 100px; /* Reduce textarea height on smaller screens */
+    }
+}
