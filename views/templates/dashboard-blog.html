@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/dashboard-header.css">
+    <link rel="stylesheet" href="/styles/dashboard-blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Blog</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand mt-2" href="#"><i class="fas fa-home fa-lg home-icon"></i>Go to home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse custom-nav" id="navbarNav">
+            <ul class="navbar-nav mt-2">
+                <li class="nav-item active">
+                    <a class="nav-link large-font" href="/templates/dashboard.html">
+                        <svg width="1.333em" height="1.333em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" style="vertical-align: middle;">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path stroke="#f5f5f5" stroke-width="2"
+                                    d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5ZM14 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5ZM4 16a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3ZM14 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-6Z">
+                                </path>
+                            </g>
+                        </svg>
+                        <span class="text">Dashboard</span> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link large-font" href="/templates/dashboard-blog.html"><i
+                            class="fas fa-blog fa-lg"></i> Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link large-font" href="/templates/messages.html"><i
+                            class="fas fa-envelope fa-lg"></i> Messages</a>
+                </li>
+                <li class="nav-item">
+                    <hr class="custom-hr">
+                </li>
+                <li class="nav-item">
+                    <p class="nav-heading">Users & Settings</p>
+                </li>
+                <li class="nav-item add-margin-top">
+                    <a class="nav-link large-font" href="/templates/users.html"><i class="fas fa-users fa-lg"></i>
+                        Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link large-font" href="/templates/accounts.html"><i class="fas fa-cog fa-lg"></i>
+                        Setting
+                    </a>
+                </li>
+                <li class="nav-item logout-item">
+                    <a class="nav-link large-font logout-button" href="/logout">
+                        <i class="fas fa-sign-out-alt fa-lg"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-3 fixed-header header-no-shadow" style="border-bottom: 2px solid grey">
+            <h1>Blogs Dashboard</h1>
+            <div class="d-flex align-items-center">
+                <a href="#" class="btn btn-light mr-1" style="background-color: #f5f5f5; border: none;">
+                    <i class="fas fa-moon"></i>
+                </a>
+                <div style="position: relative; margin-right: 5px;">
+                    <a href="#" class="btn btn-light mr-1" style="background-color: #f5f5f5; border: none;">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                    <span class="badge badge-danger" style="position: absolute; top: 0; right: 0px; font-size: 0.65em;">4</span>
+                </div>
+                <div class="dropdown no-shadow">
+                    <a class="dropdown-toggle text-dark" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #f5f5f5; border: none;">
+                        <img src="/images/profile.jpeg" alt="Profile" class="rounded-circle mr-2" width="40" height="40">
+                        <span style="font-weight: bold;">Celse Honore</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="margin-top: 15px;">
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="create-blog-button-container">
+            <a href="/templates/create-blog-post.html" class="create-blog-button">
+                <i class="fas fa-plus"></i> Create a new blog post
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-tasks"></i><h5 style="display: inline-block; margin-left: 5px;">Recent Blogs</h5>
+                       
+                        <div class="search-box">
+                            <input type="text" class="search-input" placeholder="Search blogs...">
+                            <button class="search-button"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <!-- Blog Post 1 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="card-title" style="font-size: 1.5rem; font-weight: 600;">Algorithm and Datastructures</h3>
+                                            <img src="/images/elon-profile.jpg" alt="Author" class="rounded-circle" width="40" height="40">
+                                        </div>
+                                        <h5 style="font-size: .975em; font-weight: 600;">Description</h5>
+                                        <p class="card-text">
+                                            This is a short description for the blog post.
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center" style="font-size: 0.775em; color: #888; margin-top: 10px;">
+                                            <a href="#" class="btn btn-primary read-more">Read More</a>
+                                            <div>
+                                                <i class="fas fa-clock"></i>
+                                                <span>Posted on: 2022-01-01</span>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2" style="font-size: .975em; font-weight: 600; margin-top: 0">
+                                            <p>By <span>John Doe</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Blog Post 2 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="card-title" style="font-size: 1.5rem; font-weight: 600;">Algorithm and Datastructures</h3>
+                                            <img src="/images/elon-profile.jpg" alt="Author" class="rounded-circle" width="40" height="40">
+                                        </div>
+                                        <h5 style="font-size: .975em; font-weight: 600;">Description</h5>
+                                        <p class="card-text">
+                                            This is a short description for the blog post.
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center" style="font-size: 0.775em; color: #888; margin-top: 10px;">
+                                            <a href="#" class="btn btn-primary read-more">Read More</a>
+                                            <div>
+                                                <i class="fas fa-clock"></i>
+                                                <span>Posted on: 2022-01-01</span>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2" style="font-size: .975em; font-weight: 600; margin-top: 0">
+                                            <p>By <span>John Doe</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Blog Post 3 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="card-title" style="font-size: 1.5rem; font-weight: 600;">Algorithm and Datastructures</h3>
+                                            <img src="/images/elon-profile.jpg" alt="Author" class="rounded-circle" width="40" height="40">
+                                        </div>
+                                        <h5 style="font-size: .975em; font-weight: 600;">Description</h5>
+                                        <p class="card-text">
+                                            This is a short description for the blog post.
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center" style="font-size: 0.775em; color: #888; margin-top: 10px;">
+                                            <a href="#" class="btn btn-primary read-more">Read More</a>
+                                            <div>
+                                                <i class="fas fa-clock"></i>
+                                                <span>Posted on: 2022-01-01</span>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2" style="font-size: .975em; font-weight: 600; margin-top: 0">
+                                            <p>By <span>John Doe</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Blog Post 4 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="card-title" style="font-size: 1.5rem; font-weight: 600;">Algorithm and Datastructures</h3>
+                                            <img src="/images/elon-profile.jpg" alt="Author" class="rounded-circle" width="40" height="40">
+                                        </div>
+                                        <h5 style="font-size: .975em; font-weight: 600;">Description</h5>
+                                        <p class="card-text">
+                                            This is a short description for the blog post.
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center" style="font-size: 0.775em; color: #888; margin-top: 10px;">
+                                            <a href="#" class="btn btn-primary read-more">Read More</a>
+                                            <div>
+                                                <i class="fas fa-clock"></i>
+                                                <span>Posted on: 2022-01-01</span>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2" style="font-size: .975em; font-weight: 600; margin-top: 0">
+                                            <p>By <span>John Doe</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more blog posts here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

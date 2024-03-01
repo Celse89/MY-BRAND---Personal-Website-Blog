@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {    
+    background-color: #171C28;
+    font-family: Inter, 'Source Sans Pro';
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .content {
+    padding: 3.5rem 2rem;
+  }
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.blog-post {
+    border:  0.5px solid #50545a;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #171C28
+}
+
+
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-image {
+    border-radius: 50%;
+    border: 0.5px solid hsla(0,0%,100%,.45);
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.header h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.025em;
+    margin-bottom: 40px;
+}
+
+.post-title {
+    margin-bottom: 10px;
+    letter-spacing: -.025em;
+    font-weight: 700;
+    font-size: 1.5rem;
+    
+}
+
+
+
+.post-description {
+    margin-bottom: 20px;
+    color: hsla(0,0%,100%,.45);
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-date {
+    display: flex;
+    align-items: center;
+    color: hsla(0,0%,100%,.45);
+    font-weight: 500;
+    font-size: 0.975rem;
+}
+
+.post-date i {
+    margin-right: 5px;
+}
+
+.read-more {
+    text-decoration: none;
+}
+
+.read-more i {
+    margin-left: 5px;
+}
+
+.post-author {
+    font-style: italic;
+}
+
+.read-more {
+    color: hsla(0,0%,100%,.45);
+    text-decoration: none;
+    border: 0.5px solid hsla(0,0%,100%,.45);
+    padding: 5px 10px; 
+    display: inline-block;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.975rem;
+}
+
+.read-more:hover {
+    background-color: #454040; 
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+    .header h3 {
+        font-size: 2rem;
+    }
+}

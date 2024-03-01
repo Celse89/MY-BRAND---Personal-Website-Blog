@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, 'Source Sans Pro';
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #171C28;
+    color: rgba(255, 255, 255, 1);;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+    padding: 0 80px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-pic {
+    width: 6rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 9999px;
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.title h1 {
+    font-size: 3.5rem;
+    letter-spacing: -.05em;
+    font-weight: 600;
+}
+.title h2 {
+    font-size: 3.5rem;
+    letter-spacing: -.05em;
+    font-weight: 600;
+}
+
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+.social-links img {
+    width: 25px;
+    height: 25px;
+}
+
+
+.left-column {
+    flex: 1;
+}
+
+.right-column {
+    flex: 2;
+}
+
+
+.education ul {
+    list-style-type: none; 
+}
+
+.education strong {
+    color: rgba(255, 255, 255, 1);;
+    font-size: 0.975rem;
+}
+
+.education li {
+    color: hsla(0,0%,100%,.45);
+    font-size: .875rem;
+}
+
+.expertise ul {
+    list-style-type: none; 
+}
+
+.expertise li {
+     color: hsla(0,0%,100%,.45);
+    font-size: .875rem;  
+
+}
+
+.skills ul {
+    list-style-type: none; 
+}
+.skills li {
+     color: hsla(0,0%,100%,.45);
+    font-size: .875rem;
+}
+
+.about-me p {
+    color: hsla(0,0%,100%,.45);
+    font-weight: 500;
+    font-size: 0.975rem;
+}
+
+.projects p {
+    color: hsla(0,0%,100%,.45);
+    font-size: 0.975rem;
+    font-weight: 500;
+}
+
+
+.contact-info h3 {
+    letter-spacing: -.025em;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.contact-info ul {
+    list-style-type: none; 
+}
+
+.contact-info li {
+    font-size: .875rem;
+    color: hsla(0,0%,100%,.45);
+}
+
+.education h3 {
+    letter-spacing: -.025em;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.expertise h3 {
+    letter-spacing: -.025em;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.skills h3 {
+    letter-spacing: -.025em;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.projects h3 {
+    letter-spacing: -.025em;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.projects h4 {
+    letter-spacing: -.025em;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color:rgb(59, 130, 246);
+}
+
+.about-me h3 {
+    letter-spacing: -.025em;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.my-footer {
+    margin-top: 150px; 
+}
+
+
+.my-footer p {
+    font-size: .875rem;
+    color: hsla(0,0%,100%,.45);
+}
+
+@media (min-width: 1024px) {
+    .profile-pic {
+        width: 16rem;
+        height: 24rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title h1, .title h2 {
+        font-size: 2rem;
+    }
+
+    .profile-pic {
+        display: none;
+    }
+
+    .left-column, .right-column {
+        flex: 1 0 100%;
+    }
+
+    .profile-pic {
+        width: 8rem;
+        height: 16rem;
+    }
+}

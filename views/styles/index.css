@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, 'Source Sans Pro';
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #171C28;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    padding: 20px; 
+    max-width: 100%; 
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.profile-image img {
+    width: 495px; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.intro {
+    max-width: 80rem;
+}
+
+.intro h1{
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    color: hsla(0,0%,100%,.45);
+}
+
+.btn-more-about-me {
+    background-color: rgba(255, 255, 255, 1);
+    color: #171C28;
+    font-weight: 600;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-more-about-me:hover {
+    background-color: #9fa8bb; 
+    transition: background-color 0.3s ease; 
+}
+
+.btn-view-my-work {
+    background-color:  #171C28;
+    color: rgba(255, 255, 255, 1);
+    border:  0.8px solid #50545a;
+    padding: 0.7rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-view-my-work:hover {
+    background-color: #454040; 
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+#resume {
+    display: block;
+    margin: 20px auto 0;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px; 
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .profile-image {
+        margin-top: 20px;
+        margin-left: 0; 
+        margin-bottom: 20px;
+    }
+    .content {
+        width: 100%; 
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+        
+    }
+
+    p {
+        font-size: 0.975rem
+    }
+
+    .profile-image img {
+        width: 480px; 
+        height: 480px; 
+    }
+
+    .btn-more-about-me, .btn-view-my-work {
+        padding: 10px 20px; 
+        font-size: 14px; 
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 20px; 
+    }
+    p {
+        font-size: 0.975rem
+    }
+    .profile-image img {
+        width: 400px; 
+        height: 400px; 
+    }
+
+
+    .btn-more-about-me, .btn-view-my-work {
+        padding: 12px 24px; 
+        font-size: 15px; 
+    }
+
+    .content {
+        width: 95%; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px; 
+    }
+    p {
+        font-size: 0.975rem
+    }
+    .content {
+        width: 100%; 
+    }
+
+    .profile-image img {
+        width: 100%; 
+    }
+}
