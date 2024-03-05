@@ -7,77 +7,97 @@
     <link rel="stylesheet" href="/styles/messages.css">
     <link rel="stylesheet" href="/styles/reply.css">
 
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Reply</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light sidebar" id="top-aligned-nav">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand mt-2" href="#"><i class="fas fa-home fa-lg home-icon"></i>Go to home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <div class="sidebar-sticky">
-                    <a href="/templates/dashboard.html"><h1>Dashboard</h1></a>
-                    <ul class="nav flex-column">
-                        <li class="nav-item"><a class="nav-link" href="/templates/home.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/templates/messages.html">Messages</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/templates/notifications.html">Notifications</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/templates/accounts.html">Accounts</a></li>
-                    </ul>            
-                    <div class="profile-picture">
-                        <img src="/images/profile.jpeg" alt="Profile Picture">
-                        <a href="/signout">Sign out</a>
-                    </div>
-                </div>
-            </div>
-        
+        <div class="collapse navbar-collapse custom-nav" id="navbarNav">
+            <ul class="navbar-nav mt-2">
+                <li class="nav-item active">
+                    <a class="nav-link large-font" href="/templates/dashboard.html">
+                        <svg width="1.333em" height="1.333em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" style="vertical-align: middle;">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path stroke="#f5f5f5" stroke-width="2"
+                                    d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5ZM14 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5ZM4 16a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3ZM14 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-6Z">
+                                </path>
+                            </g>
+                        </svg>
+                        <span class="text">Dashboard</span> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link large-font" href="/templates/dashboard-blog.html"><i
+                            class="fas fa-blog fa-lg"></i> Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link large-font" href="/templates/messages.html"><i
+                            class="fas fa-envelope fa-lg"></i> Messages</a>
+                </li>
+                <li class="nav-item">
+                    <hr class="custom-hr">
+                </li>
+                <li class="nav-item">
+                    <p class="nav-heading">Users & Settings</p>
+                </li>
+                <li class="nav-item add-margin-top">
+                    <a class="nav-link large-font" href="/templates/users.html"><i class="fas fa-users fa-lg"></i>
+                        Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link large-font" href="/templates/accounts.html"><i class="fas fa-cog fa-lg"></i>
+                        Setting
+                    </a>
+                </li>
+                <li class="nav-item logout-item">
+                    <a class="nav-link large-font logout-button" href="/logout">
+                        <i class="fas fa-sign-out-alt fa-lg"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
+    
 
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div class="reply-email-dashboard">
-            <div class="search">
-                <form class="search-form form-inline ml-auto">
-                <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search..." aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0 search-button" type="submit">
-                    <img src="/images/search.png" alt="Search">
-                </button>
-                </form>
-            </div>
-            <div class="reply-email">
-                <div class="row">
-                    <img src="/assets/account-circle-svgrepo-com.svg" alt="Post 1">
-                    <div class="message-description">
-                        <div>
-                            <p>You are doing great</p>
-                            <p>From Celse Honore RUGIRA</p>
-                        </div>
-                        
-                        <div class="blog-time">
-                            <img src="/assets/Time.svg" alt="" srcset="">
-                            <p><span>February 2, 2024</span></p>
-                        </div>
-                    </div>
+    <div class="container mt-4 border rounded p-3 position-relative">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="/images/elon-profile.jpg" alt="Sender's Profile" class="rounded-circle mr-2" width="40" height="40">
+                    <h5 class="mb-1 mr-2" style="color: #333; font-size: 1em;">Celse Honore</h5>
                 </div>
-                <div class="reply-email-content">
-                    <form>
-                        <div class="form-group">
-                            <label for="emailSubject">Subject</label>
-                            <input type="text" class="form-control" id="emailSubject" placeholder="Enter email subject">
-                        </div>
-                        <div class="form-group">
-                            <label for="emailBody">Message</label>
-                            <textarea class="form-control" id="emailBody" rows="6" placeholder="Enter your message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send</button>
-                    </form>
+                <div id="message">
+                    <p class="mb-1">Some quick example text to build on the card title and make up the bulk of the content.</p>
                 </div>
+                <button id="replyButton" class="">Reply</button>
             </div>
         </div>
-    </main>
+    
+        <div class="reply-container">
+            <form id="reply-form">
+                <div id="editor"></div>
+                <div class="button-group">
+                    <button type="submit" id="publish-button">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+   
 
+    
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="/static/reply.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>

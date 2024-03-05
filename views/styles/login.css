@@ -22,7 +22,7 @@
     margin-top: 35px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
     padding: 20px;
     background-color: #f5f5f5;
     color: #171C28;
@@ -35,9 +35,7 @@
   }
   
   
-  .login-boxh1 {
-    padding-top: 20px;
-  }
+ 
   
   .login-box input,
   .login-box button {
@@ -143,4 +141,16 @@
   margin-right: 180px;
   box-sizing: border-box; 
 
+}
+
+
+input, .error-message {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
 }

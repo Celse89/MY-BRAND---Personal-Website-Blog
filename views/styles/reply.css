@@ -15,55 +15,64 @@ body {
 }
 
 
-.reply-email-dashboard {
-    padding: 20px;
+#reply-form {
+    display: none;
 }
 
-.reply-email-icon {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+#editor {
+    min-height: 150px;
+    max-height: 300px;
+    overflow-y: auto;
 }
 
-.reply-email-content {
-    margin-top: 20px;
+#publish-button {
+    background-color: #00c2ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-.reply-email-dashboard {
-    padding: 20px;
+#publish-button:hover {
+    background-color: #008fb3;
 }
 
-.reply-email-icon {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-
-
-.reply-email-content {
-    margin-top: 20px;
-}
-
-#emailBody {
-    height: 300px;
-}
-
-.message-description {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    background-color: #D9D9D9;
+#replyButton {
+    background-color: #00c2ff !important;
+    color: #f5f5f5 !important;
+    font-weight: 600 !important;
+    border: none !important;
     border-radius: 5px;
-    padding: 10px; 
-    width: 60%; 
-    font-size: 1em;
-    line-height: 1.2; 
+    padding: 7px 15px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+#replyButton:hover {
+    background-color: #0086b3 !important;
+    border: none !important;
+}
+#replyButton:focus {
+    border: none !important;
 }
 
 
-@media (max-width: 768px) {
-    body {
-      flex-direction: column;
-    }
+#replyButton:focus, #publish-button:focus {
+    outline: none;
+}
+
+
+#message {
+    margin-bottom: 20px;
+}
+
+#message p {
+    color: #666; 
+    margin-left: 47px
 }

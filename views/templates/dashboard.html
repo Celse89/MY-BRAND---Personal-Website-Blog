@@ -1,132 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/dashboard.css">
     <link rel="stylesheet" href="/styles/dashboard-header.css">
+    <link rel="stylesheet" href="/styles/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Dashboard</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-md navbar-light sidebar" id="top-aligned-nav">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand mt-2" href="#"><i class="fas fa-home fa-lg home-icon"></i>Go to home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <div class="sidebar-sticky">
-                    <a href="/templates/dashboard.html"><h1>Dashboard</h1></a>
-                    <ul class="nav flex-column">
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/templates/messages.html">Messages</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Notifications</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/templates/accounts.html">Accounts</a></li>
-                    </ul>            
-                    <div class="profile-picture">
-                        <img src="/images/profile.jpeg" alt="Profile Picture">
-                        <a href="/signout">Sign out</a>
-                    </div>
-                </div>
-            </div>
-        
+        <div class="collapse navbar-collapse custom-nav" id="navbarNav">
+            <ul class="navbar-nav mt-2">
+                <li class="nav-item active">
+                    <a class="nav-link large-font" href="/templates/dashboard.html">
+                        <svg width="1.333em" height="1.333em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" style="vertical-align: middle;">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path stroke="#f5f5f5" stroke-width="2"
+                                    d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5ZM14 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5ZM4 16a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3ZM14 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-6Z">
+                                </path>
+                            </g>
+                        </svg>
+                        <span class="text">Dashboard</span> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link large-font" href="/templates/dashboard-blog.html"><i
+                            class="fas fa-blog fa-lg"></i> Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link large-font" href="/templates/messages.html"><i
+                            class="fas fa-envelope fa-lg"></i> Messages</a>
+                </li>
+                <li class="nav-item">
+                    <hr class="custom-hr">
+                </li>
+                <li class="nav-item">
+                    <p class="nav-heading">Users & Settings</p>
+                </li>
+                <li class="nav-item add-margin-top">
+                    <a class="nav-link large-font" href="/templates/users.html"><i class="fas fa-users fa-lg"></i>
+                        Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link large-font" href="/templates/accounts.html"><i class="fas fa-cog fa-lg"></i>
+                        Setting
+                    </a>
+                </li>
+                <li class="nav-item logout-item">
+                    <a class="nav-link large-font logout-button" href="/logout">
+                        <i class="fas fa-sign-out-alt fa-lg"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div class="dashboard-content">
-            <div class="search">
-                <form class="search-form form-inline ml-auto">
-                <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search..." aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0 search-button" type="submit">
-                    <img src="/images/search.png" alt="Search">
-                </button>
-                </form>
-            </div>
-            <div class="dashboard-icon">
-                <div class="row">
-                    <div class="item">
-                        <p class="number">10</p>
-                        <img src="/assets/users-svgrepo-com.svg" alt="Users">
-                        <p>Users</p>
-                    </div>
-                    <div class="item">
-                        <p class="number">5</p>
-                        <img src="/assets/notifications-alert-svgrepo-com.svg" alt="Notifications">
-                        <p>Notifications</p>
-                    </div>
-                    <div class="item">
-                        <p class="number">3</p>
-                        <img src="/assets/comments-svgrepo-com.svg" alt="Messages">
-                        <p>Messages</p>
-                    </div>
+    
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-3 fixed-header header-no-shadow" style="border-bottom: 2px solid grey">
+            <h1>Dashboard</h1>
+            <div class="d-flex align-items-center">
+                <a href="#" class="btn btn-light mr-1" style="background-color: #f5f5f5; border: none;">
+                    <i class="fas fa-moon"></i>
+                </a>
+                <div style="position: relative; margin-right: 5px;">
+                    <a href="#" class="btn btn-light mr-1" style="background-color: #f5f5f5; border: none;">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                    <span class="badge badge-danger" style="position: absolute; top: 0; right: 0px; font-size: 0.65em;">4</span>
                 </div>
-                <div class="row">
-                    <div class="item">
-                        <img src="/assets/account-circle-svgrepo-com.svg" alt="Accounts">
-                        <p>Accounts</p>
+                <div class="dropdown no-shadow">
+                    <a class="dropdown-toggle text-dark" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #f5f5f5; border: none;">
+                        <img src="/images/profile.jpeg" alt="Profile" class="rounded-circle mr-2" width="40" height="40">
+                        <span style="font-weight: bold;">Celse Honore</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="margin-top: 15px;">
+                        <a class="dropdown-item" href="#">Logout</a>
                     </div>
-                    <div class="item">
-                        <img src="/assets/piece-of-paper-and-pencil-svgrepo-com.svg" alt="Blogs">
-                        <p>Blogs</p>
-                    </div>
-                    <div class="item invisible"></div>
-                </div>
-            </div>
-            <div class="weekly-post">
-                <h1>See weekly Blog Post </h1>
-                <div class="post">
-                    <i class="fas fa-chevron-left"></i>
-                        <div class="post-content">
-                            <img src="/images/profile.jpeg" alt="Post 1">
-                            <div class="post-descrption">
-                                <div>
-                                    <h2>Algorithm and Data structure</h2>
-                                    <p>By Celse Honore RUGIRA</p>
-                                </div>
-                                
-                                <div class="blog-time">
-                                    <img src="/assets/Time.svg" alt="" srcset="">
-                                    <p>Posted on <span>February 2, 2024</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post-content">
-                            <img src="/images/profile.jpeg" alt="Post 1">
-                            <div class="post-descrption">
-                                <div>
-                                    <h2>Algorithm and Data structure</h2>
-                                    <p>By Celse Honore RUGIRA</p>
-                                </div>
-                                
-                                <div class="blog-time">
-                                    <img src="/assets/Time.svg" alt="" srcset="">
-                                    <p>Posted on <span>February 2, 2024</span></p>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="post-content">
-                            <img src="/images/profile.jpeg" alt="Post 1">
-                            <div class="post-descrption">
-                                <div>
-                                    <h2>Algorithm and Data structure</h2>
-                                    <p>By Celse Honore RUGIRA</p>
-                                </div>
-                                
-                                <div class="blog-time">
-                                    <img src="/assets/Time.svg" alt="" srcset="">
-                                    <p>Posted on <span>February 2, 2024</span></p>
-                                </div>
-                            </div>
-                        </div> 
-
-                    <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
         </div>
-    </main>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h3 class="card-title highlight-title">Users</h3>
+                                <div class="number-circle"><span class="highlight">500</span></div>
+                            </div>
+                            <i class="fas fa-users fa-2x text-dark"></i>
+                        </div>
+                        <a href="/users" class="btn custom-btn mt-3">View Users</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h3 class="card-title highlight-title">Blogs</h3>
+                                <div class="number-circle"><span class="highlight">200</span></div>
+                            </div>
+                            <i class="fas fa-blog fa-2x text-dark"></i>
+                        </div>
+                        <a href="/blogs" class="btn custom-btn mt-3">View Blogs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h3 class="card-title highlight-title">Messages</h3>
+                                <div class="number-circle"><span class="highlight">20</span></div>
+                            </div>
+                            <i class="fas fa-envelope fa-2x text-dark"></i>
+                        </div>
+                        <a href="/messages" class="btn custom-btn mt-3">View Messages</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-tasks"></i> Recent Activities
+                        <div class="search-box">
+                            <input type="text" class="search-input" placeholder="Search activities...">
+                            <button class="search-button"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="activity">
+                                    <img src="/assets/account-circle-svgrepo-com.svg" alt="Profile Icon" class="profile-icon">
+                                    <div class="activity-content">
+                                        <div class="activity-text">
+                                            <strong>John Doe</strong> published a new blog post: <a href="#" style="text-decoration: none;">Understanding AI"</a>
+                                        </div>
+                                        <div class="activity-icons">
+                                            <a href="#" class="icon-link"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="icon-link"><i class="fas fa-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="activity-time">
+                                        <i class="fas fa-clock"></i> 5 mins ago
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="activity">
+                                    <img src="/assets/account-circle-svgrepo-com.svg" alt="Profile Icon" class="profile-icon">
+                                    <div class="activity-content">
+                                        <div class="activity-text">
+                                            <strong>Jane Smith</strong> commented on <a href="#" style="text-decoration: none;">"The Future of Tech"</a>
+                                        </div>
+                                        <div class="activity-icons">
+                                            <a href="#" class="icon-link"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="icon-link"><i class="fas fa-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="activity-time">
+                                        <i class="fas fa-clock"></i> 20 mins ago
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="activity">
+                                    <img src="/assets/account-circle-svgrepo-com.svg" alt="Profile Icon" class="profile-icon">
+                                    <div class="activity-content">
+                                        <div class="activity-text">
+                                            <strong>Bob Johnson</strong> registered an account
+                                        </div>
+                                        <div class="activity-icons">
+                                            <a href="#" class="icon-link"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="icon-link"><i class="fas fa-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="activity-time">
+                                        <i class="fas fa-clock"></i> 1 hour ago
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header"><i class="fas fa-blog"></i> Recent Blog Updates</div>
+                    <div class="card-body">
+                        <div class="media">
+                            <img src="/images/elon-profile.jpg" class="mr-3" alt="Post 1">
+                            <div class="media-body">
+                                <h5 class="mt-0">Understanding AI</h5>
+                                <p><span class="author">By Celse Honore RUGIRA</span></p>
+                                <div class="blog-time">
+                                    <p><i class="far fa-clock mr-1"></i><span>February 2, 2024</span></p>
+                                </div>
+                                <a href="/blog/" class="btn btn-primary read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="media">
+                            <img src="/images/elon-profile.jpg" class="mr-3" alt="Post 1">
+                            <div class="media-body">
+                                <h5 class="mt-0">The Future of Tech</h5>
+                                <p><span class="author">By Celse Honore RUGIRA</span></p>
+                                <div class="blog-time">
+                                    <p><i class="far fa-clock mr-1"></i><span>February 2, 2024</span></p>
+                                </div>
+                                <a href="/blog/" class="btn btn-primary read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>

@@ -8,32 +8,35 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <title>Dashboard</title>
+    <title>Accounts</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light sidebar" id="top-aligned-nav">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand mt-2" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <div class="sidebar-sticky">
-                    <h1>Dashboard</h1>
-                    <ul class="nav flex-column">
-                        <li class="nav-item"><a class="nav-link" href="/templates/home.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/templates/messages.html">Messages</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/templates/notifications.html">Notifications</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/templates/accounts.html">Accounts</a></li>
-                    </ul>            
-                    <div class="profile-picture">
-                        <img src="/images/profile.jpeg" alt="Profile Picture">
-                        <a href="/signout">Sign out</a>
-                    </div>
-                </div>
-            </div>
-        
-    </nav>
+        <div class="collapse navbar-collapse custom-nav" id="navbarNav">
+          <ul class="navbar-nav mt-2">
+            <li class="nav-item active">
+              <a class="nav-link large-font" href="/templates/dashboard.html"><i class="fas fa-home fa-lg"></i> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link large-font" href="/templates/dashboard-blog.html"><i class="fas fa-blog fa-lg"></i> Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link large-font" href=""><i class="fas fa-briefcase fa-lg"></i> Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link large-font" href="/templates/notifications.html"><i class="fas fa-envelope fa-lg"></i> Email</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link large-font" href="/templates/users.html"><i class="fas fa-users fa-lg"></i> Users</a>
+            <li class="nav-item">
+              <a class="nav-link large-font" href="/templates/accounts.html"><i class="fas fa-cog fa-lg"></i> Settings</a>
+          </ul>
+        </div>
+      </nav>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
         <div class="accounts-dashboard">

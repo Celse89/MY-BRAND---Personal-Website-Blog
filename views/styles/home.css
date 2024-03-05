@@ -2,22 +2,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
-
 }
 
 body {
-    background-color: #F5F5F5;
     font-family: Inter, 'Source Sans Pro';
     min-height: 100vh;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #F5F5F5;
+    background-color: #171C28; 
+    color: #f5f5f5; 
     display: flex;
     flex-direction: column;
-
 }
-
 
 .header img {
     max-width: 400px;
@@ -36,42 +32,43 @@ h1 {
     font-size: 40px;
 }
 
-
 .header .container {
     display: flex;
     padding: 0 50px;
     width: 100%;
     margin-top: 20px;
+}
 
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 0 80px;
+}
+
+.my-bio { 
+    margin-left: 60px;
 }
 
 .my-bio h1 {
     margin: 10px 8px;
     align-self: center;
-
 }
 
 .short-bar {
     height: 50px;
     width: 10px;
     background-color: #171C28;
-
 }
 
 .long-bar {
     height: 100px;
     width: 10px;
     background-color: #171C28;
-
 }
 
 .header h3 {
     margin: 10px 8px;
-
 }
-
-
-
 
 .container-info {
     padding: 40px;
@@ -92,10 +89,8 @@ h1 {
     margin-bottom: 12px;
 }
 
-
 .resume {
-    display: inline-block;
-    padding: 16px 20px;
+    padding: 16px 30px;
     background-color: #171C28;
     color: #F5F5F5;
     text-align: center;
@@ -104,11 +99,19 @@ h1 {
     transition: all 0.5s;
     cursor: pointer;
     border-radius: 40px;
-    text-align: center;
-    margin: 40px 40px;
+    margin: 20px 0;
+    align-self: center; 
 }
 
+.resume:hover {
+    background-color: #00c2ff;
+    color: #171C28;
+    text-decoration: none;
+}
 
+.content > *:not(:last-child) {
+    padding-right: 10px; 
+}
 
 .my-skills {
     padding: 0 125px;
@@ -132,21 +135,16 @@ h1 {
     flex: 1 0 30%;
 }
 
-
-
 .my-skills-container div img {
     width: 25%;
     height: auto;
     border-radius: 10px;
 }
 
-
 .my-portifolio {
     padding: 0 125px;
     gap: 350px;
 }
-
-
 
 .portifolio h3 {
     color: #f5f5f5;
@@ -156,9 +154,6 @@ h1 {
     display: flex;
     align-items: center;
 }
-
-
-
 
 .my-portifolio-container {
     display: flex;
@@ -172,7 +167,6 @@ h1 {
     color: #171C28;
     margin-bottom: 50px;
 }
-
 
 .portifolio {
     background-color: #171C28;
@@ -188,8 +182,6 @@ h1 {
     margin-top: 0px;
     margin-bottom: 30px;
 }
-
-
 
 .contact {
     padding: 0 125px;
@@ -299,7 +291,6 @@ h1 {
     max-width: 600px;
     margin: auto;
     margin-top: 20px;
-
 }
 
 .subscribe-form form div {
@@ -326,7 +317,6 @@ h1 {
     cursor: pointer;
     margin-bottom: 4px;
     transition: background-color 0.3s ease;
-
 }
 
 #subscribe-btn:hover {
@@ -351,11 +341,9 @@ section:not(.my-bio) {
     text-decoration: none;
 }
 
-
 .my-portifolio a {
     color: #171C28;
     text-decoration: none;
-    
 }
 
 @media screen and (max-width: 768px) {
@@ -366,10 +354,14 @@ section:not(.my-bio) {
     h1 {
         font-size: 30px;
     }
-
-    .header .container {
-        padding: 0 20px;
+    .header {
+        padding: 0;
     }
+    
+    .container-info {
+        padding: 0px;
+    }
+  
 
     .container-info {
         padding: 20px;
@@ -377,6 +369,8 @@ section:not(.my-bio) {
 
     .resume {
         margin: 20px;
+        align-self: flex-start;
+        margin-left: 40px;
     }
 
     .content {
@@ -384,7 +378,15 @@ section:not(.my-bio) {
         padding: 10px;
         margin: 20px;
     }
-
+    .container {
+        margin: 0;
+    }
+    .my-bio .container {
+        margin-left: 0px;
+    }
+    .my-bio {
+        margin-left: 0px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -393,8 +395,6 @@ section:not(.my-bio) {
         gap: 50px;
     }
 }
-
-
 
 @media screen and (max-width: 768px) {
     .my-skills-container div {
@@ -406,7 +406,6 @@ section:not(.my-bio) {
     .my-skills-container div img {
         width: 50%;
     }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -416,13 +415,11 @@ section:not(.my-bio) {
     }
 }
 
-
 @media screen and (max-width: 768px) {
     .my-portifolio-container {
         flex-direction: column;
     }
 }
-
 
 @media screen and (max-width: 768px) {
     .my-portifolio-container {
@@ -442,7 +439,6 @@ section:not(.my-bio) {
     }
 }
 
-
 @media screen and (max-width: 768px) {
     .contact-container {
         display: flex;
@@ -456,7 +452,6 @@ section:not(.my-bio) {
         margin-bottom: 20px;
     }
 }
-
 
 @media screen and (max-width: 768px) {
     .contact {
