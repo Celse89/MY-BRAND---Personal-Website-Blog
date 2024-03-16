@@ -43,7 +43,7 @@
     align-items: center;
 }
 
-.highlight {
+.highlight-users, .highlight-messages, .highlight-blogs {
     font-size: 20px;
     font-weight: bold;
 }
@@ -160,4 +160,12 @@
 
 .read-more:hover {
   background-color: #0086b3 !important;
+}
+
+
+@media (max-width: 576px) {
+
+  body {
+    flex-direction: column;
+  }
 }

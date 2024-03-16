@@ -229,3 +229,37 @@ body {
 }
 
 
+@media (max-width: 576px) {
+  .navbar {
+    width: 100%;
+    position: relative;
+    top: 0;
+    flex-direction: row !important;
+  }
+  .navbar-brand {
+    order: 0;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
+  }
+  .navbar-nav,
+  .nav-item,
+  .nav-link {
+    flex-direction: row;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+@media (min-width: 577px) {
+  .navbar-nav,
+  .nav-item,
+  .nav-link {
+    flex-direction: row;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+}

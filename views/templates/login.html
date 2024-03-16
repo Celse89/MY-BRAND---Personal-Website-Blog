@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600%2C700"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A500%2C600"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/login.css">
@@ -15,7 +16,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark nav-bar" id="myNavbar">
-        <a class="navbar-brand" href="/templates/home.html" style="color: #00c2ff;">Celse Honore RUGIRA</a>
+        <a class="navbar-brand" href="/templates/index.html" style="color: #00c2ff;">Celse Honore RUGIRA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -32,25 +33,38 @@
                     <a class="nav-link" href="/templates/portifolio.html">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/templates/blog.html">Blogs</a>
+                    <a class="nav-link" href="/templates/blogs.html">Blogs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/templates/contact-me.html">Contact Me</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/templates/dashboard.html">Dashboard</a>
+                <!-- Unauthenticated users see this -->
+                <li class="nav-item" id="login">
+                    <a class="nav-link" href="/templates/login.html">Login</a>
+                </li>
+                <!-- Authenticated users see this -->
+                <li class="nav-item dropdown" id="userMenu" style="display: none;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        User Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/templates/dashboard.html">Dashboard</a>
+                        <a class="dropdown-item" href="/templates/logout.html">Logout</a>
+                    </div>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="container">
         <div class="login-box">
-            <h1>Login</h1>
+            <div id="loginSuccess" class="success-message"></div>
+            <h3>Login</h3>
             <p>Glad you’re back.!</p>
-            <input id="username" type="text" placeholder="Username" />
-            <span id="usernameError" class="error-message"></span>
+            <input id="email" type="text" placeholder="Email" />
+            <span id="emailError" class="error-message"></span>
             <input id="password" type="password" placeholder="Password" />
             <span id="passwordError" class="error-message"></span>
+            <div id="loginError" class="error-message"></div>
 
             <div class="remember-me">
                 <input type="checkbox" id="remember-me" name="remember-me" value="remember-me">
@@ -58,7 +72,7 @@
             </div>
             <button id="loginButton">Login</button>
             <div class="forgot-password-text">
-                <p>Forgot password ?</p>
+                <a id="forgot-password" href="/path/to/forgot/password/page">Forgot password ?</a>
             </div>
             <div class="line-with-text">
                 <hr>

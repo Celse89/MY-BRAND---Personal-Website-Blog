@@ -15,36 +15,7 @@ body {
 }
 
 
-.search {
-    margin-top: 20px;
-    display: flex;
-    justify-content: end;
-    padding: 20px;
-    
-}
-  
-  .search-form {
-    margin-right: 10px;
-}
-  
-  .search-input,
-  .search-button {
-    height: 40px;
-    background-color: #F5F5F5;
-    border-radius: 5px;
-}
-  
-  .search-button img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-  
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+
   
   body {
     background-color: #f5f5f5 !important;

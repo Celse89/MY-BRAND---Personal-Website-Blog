@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portifolio</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A700" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600%2C700" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A500%2C600" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="/styles/portifolio.css">
-  <link rel="stylesheet" href="/styles/header.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600%2C700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A500%2C600" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles/portifolio.css">
+    <link rel="stylesheet" href="/styles/header.css">
 
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark nav-bar" id="myNavbar">
-        <a class="navbar-brand" href="/templates/home.html" style="color: #00c2ff;">Celse Honore RUGIRA</a>
+        <a class="navbar-brand" href="/templates/index.html" style="color: #00c2ff;">Celse Honore RUGIRA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,26 +34,37 @@
                     <a class="nav-link" href="/templates/portifolio.html">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/templates/blog.html">Blogs</a>
+                    <a class="nav-link" href="/templates/blogs.html">Blogs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/templates/contact-me.html">Contact Me</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/templates/dashboard.html">Dashboard</a>
+                <!-- Unauthenticated users see this -->
+                <li class="nav-item" id="login">
+                    <a class="nav-link" href="/templates/login.html">Login</a>
+                </li>
+                <!-- Authenticated users see this -->
+                <li class="nav-item dropdown" id="userMenu" style="display: none;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/templates/dashboard.html">Dashboard</a>
+                        <a class="dropdown-item" href="/templates/logout.html">Logout</a>
+                    </div>
                 </li>
             </ul>
         </div>
     </nav>
-  <div class="content">
-    <header class="header">
-      <h3>
-        Things I have built &
-        <br>
-            <span>deployed</span> on the cloud.
-      </h3>
-    </header>
-    <!-- <div class="searching-box">
+    <div class="content">
+        <header class="header">
+            <h3>
+                Things I have built &
+                <br>
+                <span>deployed</span> on the cloud.
+            </h3>
+        </header>
+        <!-- <div class="searching-box">
         <div class="search">
             <form class="form-inline ml-auto">
             <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search a project" aria-label="Search">
@@ -63,55 +74,61 @@
             </form>
         </div>
     </div> -->
-    <div class="projects-container">
-        <a class="project-link" href="/templates/project-1.html">
-            <img class="project-image" src="/images/user-activity.jpeg" alt="Project image">
-            <div class="project-info">
-                <p class="technologies">Python & JavaScript</p>
-                <h3 class="project-name">Git-Link</h3>
-                <p class="project-description">
-                    Provide users GitHub statistics and information about their repositories.
-                </p>
-            </div>
-        </a>
-        <a class="project-link" href="/templates/project-1.html">
-            <img class="project-image" src="/images/download.png" alt="Project image">
-            <div class="project-info">
-                <p class="technologies">Python & JavaScript</p>
-                <h3 class="project-name">AirBnB Clone Project</h3>
-                <p class="project-description">
-                    This is a clone of the AirBnB website. It is allows users to create an account, log in, and book a place to stay.
-                </p>
-            </div>
-        </a>
-        <a class="project-link" href="/templates/project-1.html">
-            <img class="project-image" src="/images/download.png" alt="Project image">
-            <div class="project-info">
-                <p class="technologies">Python & JavaScript</p>
-                <h3 class="project-name">AirBnB Clone Project</h3>
-                <p class="project-description">
-                    This is a clone of the AirBnB website. It is allows users to create an account, log in, and book a place to stay.
-                </p>
-            </div>
-        </a>
-        <a class="project-link" href="/templates/project-1.html">
-            <img class="project-image" src="/images/download.png" alt="Project image">
-            <div class="project-info">
-                <p class="technologies">Python & JavaScript</p>
-                <h3 class="project-name">AirBnB Clone Project</h3>
-                <p class="project-description">
-                    This is a clone of the AirBnB website. It is allows users to create an account, log in, and book a place to stay.
-                </p>
-            </div>
-        </a>
-    </div> 
-</div>
+        <div class="projects-container">
+            <a class="project-link" href="/templates/project-1.html">
+                <img class="project-image" src="/images/user-activity.jpeg" alt="Project image">
+                <div class="project-info">
+                    <p class="technologies">Python & JavaScript</p>
+                    <h3 class="project-name">Git-Link</h3>
+                    <p class="project-description">
+                        Provide users GitHub statistics and information about their repositories.
+                    </p>
+                </div>
+            </a>
+            <a class="project-link" href="/templates/project-1.html">
+                <img class="project-image" src="/images/download.png" alt="Project image">
+                <div class="project-info">
+                    <p class="technologies">Python & JavaScript</p>
+                    <h3 class="project-name">AirBnB Clone Project</h3>
+                    <p class="project-description">
+                        This is a clone of the AirBnB website. It is allows users to create an account, log in, and book
+                        a place to stay.
+                    </p>
+                </div>
+            </a>
+            <a class="project-link" href="/templates/project-1.html">
+                <img class="project-image" src="/images/download.png" alt="Project image">
+                <div class="project-info">
+                    <p class="technologies">Python & JavaScript</p>
+                    <h3 class="project-name">AirBnB Clone Project</h3>
+                    <p class="project-description">
+                        This is a clone of the AirBnB website. It is allows users to create an account, log in, and book
+                        a place to stay.
+                    </p>
+                </div>
+            </a>
+            <a class="project-link" href="/templates/project-1.html">
+                <img class="project-image" src="/images/download.png" alt="Project image">
+                <div class="project-info">
+                    <p class="technologies">Python & JavaScript</p>
+                    <h3 class="project-name">AirBnB Clone Project</h3>
+                    <p class="project-description">
+                        This is a clone of the AirBnB website. It is allows users to create an account, log in, and book
+                        a place to stay.
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
 
-<script src="/static/header.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/static/header.js"></script>
+    <script src="/static/authStatus.js"></script>
+    <script src="/static/login.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 

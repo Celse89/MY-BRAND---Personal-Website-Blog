@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600%2C700"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A500%2C600"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/signup.css">
@@ -32,7 +33,7 @@
                     <a class="nav-link" href="/templates/portifolio.html">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/templates/blog.html">Blogs</a>
+                    <a class="nav-link" href="/templates/blogs.html">Blogs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/templates/contact-me.html">Contact Me</a>
@@ -45,7 +46,8 @@
     </nav>
     <div class="container">
         <div class="signup-box">
-            <h1>Sign up</h1>
+            <div id="signupSuccess" class="success-message"></div>
+            <h3>Sign up</h3>
             <p>Just some details to get you in.</p>
             <input id="username" type="text" placeholder="Username" />
             <span id="usernameError" class="error-message"></span>
@@ -60,6 +62,7 @@
             <span id="confirmPasswordError" class="error-message"></span>
 
             <button id="signupButton">Sign up</button>
+            <div id="signupError" class="error-message"></div> 
             <div class="line-with-text">
                 <hr>
                     <span>or</span>
@@ -78,10 +81,9 @@
     </div>
     
 </body>
-    <script src="/static/signup.js"></script>
-    <script src="/static/header.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/static/signup.js"></script>
+    <script src="/static/header.js"></script>
 </html>

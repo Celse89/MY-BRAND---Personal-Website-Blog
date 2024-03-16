@@ -40,18 +40,30 @@
   .login-box input,
   .login-box button {
     padding: 10px;
-    border: 1px solid #171C28;
+    border: 1px solid #ccc;
     background-color: #f5f5f5;
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
   }
   
+
+.login-box input:focus {
+    outline: none;
+    border-color: #ccc;
+}
   .login-box button {
     background-color: #00c2ff;
     color: #f5f5f5;
     border: none;
     cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+
+
+  .login-box button:hover {
+    background-color: #0086b3 !important; 
   }
   
   .login-box .separator {
@@ -75,6 +87,12 @@
   
   .login-box a {
     color: #00c2ff;
+    text-decoration: none;
+    transition: colorl 0.3s ease;
+  }
+
+  .login-box a:hover {
+    color: #0086b3;
   }
   
   .line-with-text {
@@ -96,11 +114,19 @@
     font-size: 14px;
   }
 
+  .login-content p {
+    font-size: 0.8rem;
+  }
+
+  #email, #password {
+    font-size: 14px;
+  }
 
   .forgot-password-text {
     display: flex;
     justify-content: center;
     margin: auto;
+    margin-top: 5px;
     font-size: 14px;
   }
   
@@ -120,6 +146,14 @@
     font-size: 12px;
 }
 
+#forgot-password {
+  color: #171C28;
+  transition: color 0.3s ease; 
+}
+
+#forgot-password:hover {
+  color: #00c2ff;
+}
 
 #remember-me:checked + label:before {
     background: #7CC1F3;
@@ -151,6 +185,15 @@ input, .error-message {
 }
 
 .error-message {
-  color: red;
+  color: hsl(0, 75%, 50%);
   font-size: 0.8em;
+  font-weight: normal !important;
+  letter-spacing: 0.01em;
+}
+
+.success-message {
+  color: green;
+  font-size: 0.8em;
+  font-weight: normal !important;
+  letter-spacing: 0.01em;
 }

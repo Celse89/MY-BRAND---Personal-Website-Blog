@@ -4,227 +4,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blogs</title>
+  <title>Portifolio</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A700" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600%2C700" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A500%2C600" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-
-  <link rel="stylesheet" href="/styles/blogs.css">
+  <link rel="stylesheet" href="/styles/blog.css">
   <link rel="stylesheet" href="/styles/header.css">
 
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark nav-bar" id="myNavbar">
-    <a class="navbar-brand" href="/templates/home.html" style="color: rgb(80, 210, 54);">Celse Honore RUGIRA</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/templates/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/templates/about.html">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/templates/portifolio.html">Portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/templates/blogs.html">Blogs</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/templates/contact-me.html">Contact Me</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/templates/dashboard.html">Dashboard</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark nav-bar" id="myNavbar">
+        <a class="navbar-brand" href="/templates/index.html" style="color: #00c2ff;">Celse Honore RUGIRA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/templates/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/templates/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/templates/portifolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/templates/blogs.html">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/templates/contact-me.html">Contact Me</a>
+                </li>
+                <!-- Unauthenticated users see this -->
+                <li class="nav-item" id="login">
+                    <a class="nav-link" href="/templates/login.html">Login</a>
+                </li>
+                <!-- Authenticated users see this -->
+                <li class="nav-item dropdown" id="userMenu" style="display: none;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/templates/dashboard.html">Dashboard</a>
+                        <a class="dropdown-item" href="/templates/logout.html">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
   <div class="content">
     <header class="header">
       <h3>
-        You've gotten there, where the lines of code meet the lines of thought.
-        <br>
-        Welcome to my blog posts....
+        You've gotten there, 
+        where the lines of code meet the lines of thought.
       </h3>
-      <div class="my-blog-wrapper">
-        <div class="search">
-          <form class="form-inline ml-auto">
-            <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search a project" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0 search-button" type="submit">
-              <img src="/images/search.png" alt="Search">
-            </button>
-          </form>
-        </div>
-      </div>
     </header>
-    <section class="my-blogs-container">
-      <div class="container">
-        <div class="blogs">
-          <div class="blog-title">
-            <h3>Algorithm and Data Structure</h3>
-            <img class="blog-profile" src="/images/profile.jpeg" alt="">
-          </div>
-          <div class="blog-content">
-            <h4>Description</h4>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit optio sequi voluptate quam animi quo debitis odio molestiae ipsa aliquid quibusdam quae, ratione porro officia excepturi in facere necessitatibus.
-          </div>
-          <div class="read">
-            <div class="read-more">
-              <a href="/templates/single-blog.html">
-                <div>Read More</div>
-              </a>
-              <img src="/assets/Line.svg" alt="" srcset="">
+    <div class="blog-posts">
+        <div class="blog-post">
+            <div class="post-header">
+                <h3 class="post-title">Algorithm and Data Structure</h3>
+                <img class="profile-image" src="/images/profile.jpeg" alt="Profile Image">
             </div>
-            <div class="blog-time">
-              <img src="/assets/Time.svg" alt="" srcset="">
-              <p>Posted on <span>February 2, 2024</span></p>
+            <p class="post-description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit optio sequi voluptate quam animi quo debitis odio molestiae ipsa aliquid quibusdam quae, ratione porro officia excepturi in facere necessitatibus.
+            </p>
+            <a class="read-more" href="/templates/single-blog.html">
+                Read More <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="post-date">
+                <i class="fas fa-clock"></i>
+                <span>Posted on February 2, 2024</span>
             </div>
-          </div>
-          <div class="author">
-            <p>By Celse Honore RUGIRA </p>
-          </div>
+            <p class="post-author">By Celse Honore RUGIRA</p>
         </div>
-        <div class="blogs">
-          <div class="blog-title">
-            <h3>Algorithm and Data Structure</h3>
-            <img class="blog-profile" src="/images/profile.jpeg" alt="">
-          </div>
-          <div class="blog-content">
-            <h4>Description</h4>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit optio sequi voluptate quam animi quo debitis odio molestiae ipsa aliquid quibusdam quae, ratione porro officia excepturi in facere necessitatibus.
-          </div>
-          <div class="read">
-            <div class="read-more">
-              <a href="/templates/single-blog.html">
-                <div>Read More</div>
-              </a>
-              <img src="/assets/Line.svg" alt="" srcset="">
+        <div class="blog-post">
+            <div class="post-header">
+                <h3 class="post-title">Algorithm and Data Structure</h3>
+                <img class="profile-image" src="/images/profile.jpeg" alt="Profile Image">
             </div>
-            <div class="blog-time">
-              <img src="/assets/Time.svg" alt="" srcset="">
-              <p>Posted on <span>February 2, 2024</span></p>
+            <p class="post-description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit optio sequi voluptate quam animi quo debitis odio molestiae ipsa aliquid quibusdam quae, ratione porro officia excepturi in facere necessitatibus.
+            </p>
+            <a class="read-more" href="/templates/single-blog.html">
+                Read More <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="post-date">
+                <i class="fas fa-clock"></i>
+                <span>Posted on February 2, 2024</span>
             </div>
-          </div>
-          <div class="author">
-            <p>By Celse Honore RUGIRA </p>
-          </div>
+            <p class="post-author">By Celse Honore RUGIRA</p>
         </div>
-        <div class="blogs">
-          <div class="blog-title">
-            <h3>Algorithm and Data Structure</h3>
-            <img class="blog-profile" src="/images/profile.jpeg" alt="">
-          </div>
-          <div class="blog-content">
-            <h4>Description</h4>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit optio sequi voluptate quam animi quo debitis odio molestiae ipsa aliquid quibusdam quae, ratione porro officia excepturi in facere necessitatibus.
-          </div>
-          <div class="read">
-            <div class="read-more">
-              <a href="/templates/single-blog.html">
-                <div>Read More</div>
-              </a>
-              <img src="/assets/Line.svg" alt="" srcset="">
+        <div class="blog-post">
+            <div class="post-header">
+                <h3 class="post-title">Algorithm and Data Structure</h3>
+                <img class="profile-image" src="/images/profile.jpeg" alt="Profile Image">
             </div>
-            <div class="blog-time">
-              <img src="/assets/Time.svg" alt="" srcset="">
-              <p>Posted on <span>February 2, 2024</span></p>
+            <p class="post-description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit optio sequi voluptate quam animi quo debitis odio molestiae ipsa aliquid quibusdam quae, ratione porro officia excepturi in facere necessitatibus.
+            </p>
+            <a class="read-more" href="/templates/single-blog.html">
+                Read More <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="post-date">
+                <i class="fas fa-clock"></i>
+                <span>Posted on February 2, 2024</span>
             </div>
-          </div>
-          <div class="author">
-            <p>By Celse Honore RUGIRA </p>
-          </div>
+            <p class="post-author">By Celse Honore RUGIRA</p>
         </div>
-        <div class="blogs">
-          <div class="blog-title">
-            <h3>Algorithm and Data Structure</h3>
-            <img class="blog-profile" src="/images/profile.jpeg" alt="">
-          </div>
-          <div class="blog-content">
-            <h4>Description</h4>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit optio sequi voluptate quam animi quo debitis odio molestiae ipsa aliquid quibusdam quae, ratione porro officia excepturi in facere necessitatibus.
-          </div>
-          <div class="read">
-            <div class="read-more">
-              <a href="/templates/single-blog.html">
-                <div>Read More</div>
-              </a>
-              <img src="/assets/Line.svg" alt="" srcset="">
+        <div class="blog-post">
+            <div class="post-header">
+                <h3 class="post-title">Algorithm and Data Structure</h3>
+                <img class="profile-image" src="/images/profile.jpeg" alt="Profile Image">
             </div>
-            <div class="blog-time">
-              <img src="/assets/Time.svg" alt="" srcset="">
-              <p>Posted on <span>February 2, 2024</span></p>
+            <p class="post-description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit optio sequi voluptate quam animi quo debitis odio molestiae ipsa aliquid quibusdam quae, ratione porro officia excepturi in facere necessitatibus.
+            </p>
+            <a class="read-more" href="/templates/single-blog.html">
+                Read More <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="post-date">
+                <i class="fas fa-clock"></i>
+                <span>Posted on February 2, 2024</span>
             </div>
-          </div>
-          <div class="author">
-            <p>By Celse Honore RUGIRA </p>
-          </div>
+            <p class="post-author">By Celse Honore RUGIRA</p>
         </div>
-        <div class="blogs">
-          <div class="blog-title">
-            <h3>Algorithm and Data Structure</h3>
-            <img class="blog-profile" src="/images/profile.jpeg" alt="">
-          </div>
-          <div class="blog-content">
-            <h4>Description</h4>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit optio sequi voluptate quam animi quo debitis odio molestiae ipsa aliquid quibusdam quae, ratione porro officia excepturi in facere necessitatibus.
-          </div>
-          <div class="read">
-            <div class="read-more">
-              <a href="/templates/single-blog.html">
-                <div>Read More</div>
-              </a>
-              <img src="/assets/Line.svg" alt="" srcset="">
-            </div>
-            <div class="blog-time">
-              <img src="/assets/Time.svg" alt="" srcset="">
-              <p>Posted on <span>February 2, 2024</span></p>
-            </div>
-          </div>
-          <div class="author">
-            <p>By Celse Honore RUGIRA </p>
-          </div>
-        </div>
-        <div class="blogs">
-          <div class="blog-title">
-            <h3>Algorithm and Data Structure</h3>
-            <img class="blog-profile" src="/images/profile.jpeg" alt="">
-          </div>
-          <div class="blog-content">
-            <h4>Description</h4>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit optio sequi voluptate quam animi quo debitis odio molestiae ipsa aliquid quibusdam quae, ratione porro officia excepturi in facere necessitatibus.
-          </div>
-          <div class="read">
-            <div class="read-more">
-              <a href="/templates/single-blog.html">
-                <div>Read More</div>
-              </a>
-              <img src="/assets/Line.svg" alt="" srcset="">
-            </div>
-            <div class="blog-time">
-              <img src="/assets/Time.svg" alt="" srcset="">
-              <p>Posted on <span>February 2, 2024</span></p>
-            </div>
-          </div>
-          <div class="author">
-            <p>By Celse Honore RUGIRA </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
- 
-  <script src="/static/header.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    </div>
+    
+    </div>
+
+<script src="/static/header.js"></script>
+<script src="/static/authStatus.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

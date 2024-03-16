@@ -36,19 +36,23 @@ body {
   
 }
 
-.signup-box h1 {
-  padding-top: 5px;
-  color: #171C28;
+.signup-box p {
+  font-size: .975rem
 }
 
 .signup-box input,
 .signup-box button {
   padding: 10px;
-  border: 1px solid #171C28;
+  border: 1px solid #ccc;
   background-color: #f5f5f5;
   border-radius: 5px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.signup-box input:focus {
+  outline: none;
+  border-color: #ccc;
 }
 
 .signup-box button {
@@ -56,6 +60,12 @@ body {
   color: #f5f5f5;
   border: none;
   cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.signup-box button:hover {
+  background-color: #0086b3 !important; 
 }
 
 .signup-box .separator {
@@ -79,6 +89,15 @@ body {
 
 .signup-box a {
   color: #00c2ff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.signup-box a:hover {
+  color: #0086b3;
+}
+
+#username, #email, #password, #confirmPassword {
+  font-size: 14px;
 }
 
 .line-with-text {
@@ -97,32 +116,31 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
-#button {
-  display: inline-block;
-  padding: 13px 20px;
-  background-color: #00c2ff;
-  color: #F5F5F5;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px; 
-  transition: all 0.5s;
-  border: none;
-  cursor: pointer;
-  border-radius: 40px;
-  text-align: center;
-  margin-right: 180px;
+.login-content p {
+  font-size: 0.8rem;
+
 }
 
 input, .error-message {
   margin: 0;
   padding: 0;
+  
   display: block;
 }
 
-.error-message {
-  color: red;
+.success-message {
+  color: green;
   font-size: 0.8em;
+  font-weight: normal !important;
+  letter-spacing: 0.01em;
+}
+
+.error-message {
+  color: hsl(0, 75%, 50%);
+  font-size: 0.8em;
+  font-weight: normal !important;
+  letter-spacing: 0.01em;
 }
