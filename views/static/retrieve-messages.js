@@ -1,12 +1,13 @@
 const MESSAGE_API_URL = 'http://localhost:5500/api/messages';
 
 document.addEventListener('DOMContentLoaded', function() {
+    let token = localStorage.getItem('token');
     fetch(MESSAGE_API_URL, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
         },
-        credentials: 'include',
     })
     .then(response => {
         if (!response.ok) {

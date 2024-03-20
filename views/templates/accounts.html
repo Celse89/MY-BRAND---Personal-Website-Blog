@@ -11,43 +11,64 @@
     <title>Accounts</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand mt-2" href="#">Dashboard</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse custom-nav" id="navbarNav">
-          <ul class="navbar-nav mt-2">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand mt-2" href="/templates/index.html"><i class="fas fa-home fa-lg home-icon"></i>Go to home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse custom-nav" id="navbarNav">
+        <ul class="navbar-nav mt-2">
             <li class="nav-item active">
-              <a class="nav-link large-font" href="/templates/dashboard.html"><i class="fas fa-home fa-lg"></i> Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link large-font" href="/templates/dashboard.html">
+                    <svg width="1.333em" height="1.333em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" style="vertical-align: middle;">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path stroke="#f5f5f5" stroke-width="2"
+                                d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5ZM14 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5ZM4 16a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3ZM14 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-6Z">
+                            </path>
+                        </g>
+                    </svg>
+                    <span class="text">Dashboard</span> <span class="sr-only">(current)</span>
+                </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link large-font" href="/templates/dashboard-blog.html"><i class="fas fa-blog fa-lg"></i> Blogs</a>
+                <a class="nav-link large-font" href="/templates/dashboard-blog.html"><i
+                        class="fas fa-blog fa-lg"></i> Blogs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link large-font" href=""><i class="fas fa-briefcase fa-lg"></i> Portfolio</a>
+                <a class="nav-link large-font" href="/templates/messages.html"><i class="fas fa-envelope fa-lg"></i>
+                    Messages</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link large-font" href="/templates/notifications.html"><i class="fas fa-envelope fa-lg"></i> Email</a>
+                <hr class="custom-hr">
             </li>
             <li class="nav-item">
-              <a class="nav-link large-font" href="/templates/users.html"><i class="fas fa-users fa-lg"></i> Users</a>
+                <p class="nav-heading">Users & Settings</p>
+            </li>
+            <li class="nav-item add-margin-top">
+                <a class="nav-link large-font" href="/templates/users.html"><i class="fas fa-users fa-lg"></i>
+                    Users</a>
+            </li>
             <li class="nav-item">
-              <a class="nav-link large-font" href="/templates/accounts.html"><i class="fas fa-cog fa-lg"></i> Settings</a>
-          </ul>
-        </div>
-      </nav>
+                <a class="nav-link large-font" href="/templates/accounts.html"><i class="fas fa-cog fa-lg"></i>
+                    Setting
+                </a>
+            </li>
+            <li class="nav-item logout-item">
+                <a class="nav-link large-font logout-button" href="/logout">
+                    <i class="fas fa-sign-out-alt fa-lg"></i> Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
         <div class="accounts-dashboard">
-            <div class="search">
-                <form class="search-form form-inline ml-auto">
-                <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search..." aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0 search-button" type="submit">
-                    <img src="/images/search.png" alt="Search">
-                </button>
-                </form>
-            </div>
+            
             <div class="accounts-change">
                 <div class="profile-image-upload">
                     <img src="/assets/account-circle-svgrepo-com.svg" alt="Profile Image">

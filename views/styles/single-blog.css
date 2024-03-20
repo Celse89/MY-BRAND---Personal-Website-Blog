@@ -234,69 +234,22 @@ p {
 
 
 
-
 .button-count {
-    display: flex;
-    align-items: center;
     margin-top: 20px;
-}
-
-.like-count, .comment-count {
     display: flex;
+    gap: 20px;
     align-items: center;
 }
 
-.like-text, .comment-text {
-    margin-left: 5px; 
-}
-
-.comment-count {
-    margin-left: 15px;
-}
-
-.like-count, .comment-count {
+.comment-button-count{
+    margin-top: 10px;
     display: flex;
-    gap: 2px;
-}
-
-.comment-count svg {
-    margin-top: 5px;
-}
-
-.share-button {
-    margin-top: 8px;
-    margin-left: 10px;
-}
-
-.button-count-reply {
-    display: flex;
+    gap: 15px;
     align-items: center;
 }
 
-.like-count-reply, .comment-count-reply {
-    display: flex;
-    align-items: center;
-
-}
-
-.like-count {
-    margin-left: 5px;
-    font-weight: bold;
-}
-
-.like-text-reply, .comment-text-reply {
-    margin-left: 5px; 
-}
-
-.comment-count-reply svg {
-    margin-top: 5px;
-    margin-left: 12px;
-}
 
 
-.button-count-reply {
-    margin-left: 20px;
-}
 
 .back-arrow {
     background-image: url('/assets/left-arrow-svgrepo-com.svg');

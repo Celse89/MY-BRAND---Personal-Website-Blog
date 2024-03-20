@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/styles/dashboard-blog.css">
     <link rel="stylesheet" href="/styles/create-blog-post.css">
     
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <!-- <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Create Blog</title>
@@ -73,9 +73,14 @@
             <form id="blog-form">
                 <div class="input-group">
                     <input type="text" id="blog-title" placeholder="Add Title">
-                    <input type="text" id="blog-author" placeholder="Add author's name">
+                    <!-- <input type="text" id="blog-author" placeholder="Add author's name"> -->
+                    <input type="file" id="blog-file" accept="image/*">
+                    <textarea id="blog-content" placeholder="Write your blog post here..."></textarea>
                 </div>
-                <div id="editor"></div>
+                
+                <!-- <div id="editor"></div> -->
+               
+
                 <div class="button-group">
                     <button type="submit" id="publish-button">Publish</button>
                     <button type="button" id="cancel-button">Cancel</button>
@@ -84,7 +89,7 @@
         </div>
     </div>
     
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <!-- <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script> -->
     <script src="/static/create-blog-post.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

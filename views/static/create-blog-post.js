@@ -1,38 +1,53 @@
-var toolbarOptions = [
-    ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-    ['blockquote', 'code-block'],
+const BASE_URL = 'http://localhost:5500/api/blogs'; 
 
-    [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-    [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
-    [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
-    [{ 'direction': 'rtl' }],                         // text direction
+document.addEventListener('DOMContentLoaded', function () {
+    const token = localStorage.getItem('token');
 
-    [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+    const form = document.querySelector('#blog-form'); 
+    const titleInput = document.querySelector('#blog-title'); 
+    const contentInput = document.querySelector('#blog-content'); 
+    const imageInput = document.querySelector('#blog-file');
+    const cancelButton = document.querySelector('#cancel-button');
 
-    [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-    [{ 'font': [] }],
-    [{ 'align': [] }],
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    ['clean'],                                         // remove formatting button
+        const title = titleInput.value;
+        const content = contentInput.value;
+        const image = imageInput.files[0];
 
-    ['link', 'image', 'video'],                        // link and image, video
+        const formData = new FormData();
+        formData.append('title', title);
+        formData.append('content', content);
+        formData.append('image', image);
+        
+        fetch(BASE_URL, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+            
+        })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then((data) => {
+            // Redirect to dashboard-blog.html after creating a blog post
+            window.location.href = '/templates/dashboard-blog.html';
+        })
+        .catch((error) => {
+            console.error('There has been a problem with your fetch operation:', error);
+        });
+    });
 
-    ['emoji'],                                         // emoji
-
-    ['mention'],                                       // mention
-
-    ['undo', 'redo'],                                  // undo and redo
-];
-
-var quill = new Quill('#editor', {
-    modules: {
-        toolbar: toolbarOptions,
-        'emoji-shortname': true,                       // enable emoji-shortname module
-        'emoji-textarea': true,                        // enable emoji-textarea module
-        'emoji-toolbar': true,                         // enable emoji-toolbar module
-        'mention': true,                               // enable mention module
-    },
-    theme: 'snow'
+    cancelButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        titleInput.value = '';
+        contentInput.value = '';
+        imageInput.value = '';
+    });
 });

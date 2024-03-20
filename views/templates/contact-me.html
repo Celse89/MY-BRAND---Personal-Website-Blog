@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact-me</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A700"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600%2C700"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A500%2C600"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600%2C700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A500%2C600" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-
-
-
-    <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/contact-me.css">
+
+
 </head>
+
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark nav-bar" id="myNavbar">
         <a class="navbar-brand" href="/templates/index.html" style="color: #00c2ff;">Celse Honore RUGIRA</a>
@@ -40,24 +40,24 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/templates/contact-me.html">Contact Me</a>
                 </li>
-                <!-- Unauthenticated users see this -->
                 <li class="nav-item" id="login">
                     <a class="nav-link" href="/templates/login.html">Login</a>
                 </li>
-                <!-- Authenticated users see this -->
                 <li class="nav-item dropdown" id="userMenu" style="display: none;">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Menu
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i> <!-- Font Awesome user icon -->
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/templates/dashboard.html">Dashboard</a>
-                        <a class="dropdown-item" href="/templates/logout.html">Logout</a>
+                        <a id="logoutLink" class="dropdown-item" href="/templates/logout.html">Logout</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
-    <div class="content">
+    <div class="container">
+
         <div class="container-contact-me">
             <h1>Feel free to reach out with any questions</h1>
             <div class="container-one">
@@ -72,7 +72,7 @@
                         <input type="text" id="name" placeholder="Your name">
                         <span id="nameError" class="error-message"></span>
                     </div>
-                    
+
                     <label for="message">message</label>
                     <textarea id="message" placeholder="Your message"></textarea>
                     <span id="messageError" class="error-message"></span>
@@ -86,20 +86,27 @@
                         <label for="subscribe-email">Email</label>
                         <input type="email" id="subscribe-email" placeholder="Your email">
                         <span id="subscribeEmailError" class="error-message"></span>
-                    </div>         
+                    </div>
                     <button type="submit" style="margin-left: 10px;">Subscribe</button>
                 </form>
             </div>
         </div>
-    </div>
-    <script src="/static/contact-me.js"></script>
-    <script src="/static/header.js"></script>
-    <script src="/static/authStatus.js"></script>
 
-    
+    </div>
+    </div>
+
+
+    <script src="/static/header.js"></script>
+    <script src="/static/contact-me.js"></script>
+    <script src="/static/logout.js"></script>
+    <script src="/static/subscribe.js"></script>
+    <script src="/static/authStatus.js"></script>
+    <script src="/static/login.js"></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>

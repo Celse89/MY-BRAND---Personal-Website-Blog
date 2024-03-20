@@ -39,18 +39,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/templates/contact-me.html">Contact Me</a>
                 </li>
-                <!-- Unauthenticated users see this -->
                 <li class="nav-item" id="login">
                     <a class="nav-link" href="/templates/login.html">Login</a>
                 </li>
-                <!-- Authenticated users see this -->
                 <li class="nav-item dropdown" id="userMenu" style="display: none;">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Menu
+                        <i class="fas fa-user"></i>  <!-- Font Awesome user icon -->
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/templates/dashboard.html">Dashboard</a>
-                        <a class="dropdown-item" href="/templates/logout.html">Logout</a>
+                        <a id="logoutLink" class="dropdown-item" href="">Logout</a>
                     </div>
                 </li>
             </ul>
@@ -68,15 +66,22 @@
                             I specialize in building websites, crafting mobile apps, and creating seamless software
                             systems.
                         </p>
-                        <button class="btn-more-about-me buttons">More about me</button>
-                        <button class="btn-view-my-work buttons">View my work</button>
+                        <a href="/templates/about.html">
+                            <button class="btn-more-about-me buttons">More about me</button>
+                        </a>
+                        <a href="/templates/portifolio.html">
+                            <button class="btn-view-my-work buttons">View my work</button>
+                        </a>
+                        
+                        
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="profile-image">
-                        <img src="/images/profile.jpeg" alt="profile-image" />
-                        <a ref="/path/to/your/resume.pdf" download="MyResume"><button id="resume"
-                                class="btn-view-my-work buttons">See my resume</button></a>
+                        <img src="/images/elon-profile.jpg" alt="profile-image" />
+                        <a href="https://drive.google.com/drive/u/0/search?q=resume" target="_blank">
+                            <button id="resume" class="btn-view-my-work buttons">See my resume</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -90,6 +95,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     
     <script src="/static/header.js"></script>
+    <script src="/static/logout.js"></script>
     
     <script src="/static/authStatus.js"></script>
     <script src="/static/login.js"></script>

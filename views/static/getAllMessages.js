@@ -1,11 +1,12 @@
-const MESSAGE_API_URL = 'http://localhost:3000/api/messages';
+const MESSAGE_API_URL = 'http://localhost:5500/api/messages';
 
 document.addEventListener('DOMContentLoaded', function () {
+    const token = localStorage.getItem('token');
     fetch(MESSAGE_API_URL, {
         method: 'GET',
-        credentials: 'include',
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}` 
         },
     })
     .then((response) => {
@@ -15,12 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
         return response.json();
     })
     .then((data) => {
+        console.log(data);
         const messages = data.data;
         const messagesContainer = document.querySelector('.list-group'); 
 
         messages.forEach((message) => {
             const messageElement = document.createElement('a');
-            messageElement.href = `/templates/reply.html?id=${message._id}`; // This sets the href to the reply page for the specific message
+            messageElement.href = `/templates/reply.html?id=${message._id}`; 
             messageElement.classList.add("list-group-item", "list-group-item-action", "mb-2", "border", "rounded");
         
             const messageContent = document.createElement('div');
@@ -30,14 +32,14 @@ document.addEventListener('DOMContentLoaded', function () {
             senderInfo.classList.add("d-flex", "align-items-center");
         
             const senderImage = document.createElement('img');
-            senderImage.src = "/images/elon-profile.jpg"; // You'll need to replace this with the actual profile image of the sender
+            senderImage.src = "/images/elon-profile.jpg"; 
             senderImage.alt = "Sender's Profile";
             senderImage.classList.add("rounded-circle", "mr-2");
             senderImage.width = "40";
             senderImage.height = "40";
         
             const senderName = document.createElement('h5');
-            senderName.textContent = message.name; // Use the name property as the sender's name
+            senderName.textContent = message.name; 
             senderName.classList.add("mb-1", "mr-2");
             senderName.style.color = "#333";
             senderName.style.fontSize = "1em";
@@ -46,12 +48,20 @@ document.addEventListener('DOMContentLoaded', function () {
             senderInfo.appendChild(senderName);
         
             const messageText = document.createElement('p');
-            messageText.textContent = message.message; // Use the message property as the message content
+            messageText.textContent = message.message; 
             messageText.classList.add("mb-1", "flex-grow-1", "ml-4");
             messageText.style.color = "#666";
+            messageText.style.flex = "1 1 auto";
+            messageText.style.textAlign = "justify";
+            messageText.style.marginRight = "25px";
         
             const messageTime = document.createElement('small');
-            messageTime.textContent = new Date(message.createdAt).toLocaleString();
+            const messageTimeDate = new Date(message.createdAt);
+            const timeOptions = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            messageTime.textContent = messageTimeDate.toLocaleString(undefined, timeOptions);
+            messageTime.style.flex = "0 0 auto";
+
+
             messageContent.appendChild(senderInfo);
             messageContent.appendChild(messageText);
             messageContent.appendChild(messageTime);

@@ -14,7 +14,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand mt-2" href="#"><i class="fas fa-home fa-lg home-icon"></i>Go to home</a>
+        <a class="navbar-brand mt-2" href="/templates/index.html"><i class="fas fa-home fa-lg home-icon"></i>Go to home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -60,7 +60,7 @@
                     </a>
                 </li>
                 <li class="nav-item logout-item">
-                    <a class="nav-link large-font logout-button" href="/logout">
+                    <a id="logoutLink" class="nav-link large-font logout-button" href="">
                         <i class="fas fa-sign-out-alt fa-lg"></i> Logout
                     </a>
                 </li>
@@ -239,12 +239,16 @@
         </div>
     </div>
 
-    <script src="/static/retrieve-messages.js"
-    <script src="/static/retrieve-users.js"
-    <script src="/static/retrieve-blogs.js"
+    <script src="/static/retrieve-users.js" defer></script>
+    <script src="/static/retrieve-messages.js" defer></script>
+    <script src="/static/retrieve-blogs.js" defer></script>
+    <script src="/static/logout.js" defer></script>
+   
+    
+    
+    <!-- <script src="/static/retrieve-blogs.js" -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -1,12 +1,13 @@
 const BLOGS_API_URL = 'http://localhost:5500/api/blogs';
 
 document.addEventListener('DOMContentLoaded', function() {
+    let token = localStorage.getItem('token');
     fetch(BLOGS_API_URL, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
         },
-        credentials: 'include',
     })
     .then(response => {
         if (!response.ok) {

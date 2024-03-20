@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="/styles/dashboard-header.css">
     <link rel="stylesheet" href="/styles/messages.css">
     <link rel="stylesheet" href="/styles/reply.css">
-
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.core.css" rel="stylesheet">
+
     <title>Reply</title>
 </head>
 <body>
@@ -74,30 +75,37 @@
             <div class="col-12">
                 <div class="d-flex align-items-center mb-3">
                     <img src="/images/elon-profile.jpg" alt="Sender's Profile" class="rounded-circle mr-2" width="40" height="40">
-                    <h5 class="mb-1 mr-2" style="color: #333; font-size: 1em;">Celse Honore</h5>
+                    <h5 id="senderName" class="mb-1 mr-2" style="color: #333; font-size: 1em;">Celse Honore</h5>
                 </div>
                 <div id="message">
-                    <p class="mb-1">Some quick example text to build on the card title and make up the bulk of the content.</p>
+                   
                 </div>
+                <p id="messageTime"></p>
+        
                 <button id="replyButton" class="">Reply</button>
+                <button id="deleteButton" class="">Delete</button>
+        
+                <div id="replies-container">
+                    <h2 class="reply-section-title">Replies</h2>
+                </div>
             </div>
         </div>
     
         <div class="reply-container">
             <form id="reply-form">
-                <div id="editor"></div>
-                <div class="button-group">
-                    <button type="submit" id="publish-button">Send</button>
-                </div>
+                <textarea id="editor" name="message" class="quill-textarea"></textarea>
+                <button type="submit" id="publish-button">Send</button>
             </form>
         </div>
     </div>
     
    
 
+    <script src="/static/messageById.js"></script>
+
     
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script src="/static/reply.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.core.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>

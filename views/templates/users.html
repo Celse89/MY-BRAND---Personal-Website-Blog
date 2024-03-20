@@ -13,7 +13,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand mt-2" href="#"><i class="fas fa-home fa-lg home-icon"></i>Go to home</a>
+        <a class="navbar-brand mt-2" href="/templates/index.html"><i class="fas fa-home fa-lg home-icon"></i>Go to home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -128,6 +128,7 @@
                                     <th scope="col">Username</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">isAdmin</th>
+                                    <th scope="col">Subscription</th>
                                     <th scope="col">Actions</th>
                                 </tr>
                             </thead>
@@ -135,17 +136,46 @@
                                 <!-- The rows will be inserted dynamically by the getAllUsers.js script -->
                             </tbody>
                         </table>
-                        <div id="editUserForm" style="display: none;">
-                            <form>
-                                <label for="editUsername">Username:</label><br>
-                                <input type="text" id="editUsername" name="editUsername"><br>
-                                <label for="editEmail">Email:</label><br>
-                                <input type="text" id="editEmail" name="editEmail"><br>
-                                <label for="editIsAdmin">Is Admin:</label><br>
-                                <input type="checkbox" id="editIsAdmin" name="editIsAdmin"><br>
-                                <input type="hidden" id="editUserId" name="editUserId">
-                                <input type="submit" value="Submit">
-                            </form>
+                        <div class="users-dashboard">
+                            <!-- Existing table and other code -->
+                        
+                            <!-- Add your modal here -->
+                            <div class="modal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content modal-content-custom">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Edit User Details</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="username">Username</label>
+                                                    <input type="text" id="username" class="input-field" placeholder="Enter username">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="text" id="email" class="input-field" placeholder="Enter email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="isAdmin">Is Admin</label>
+                                                    <input type="checkbox" id="isAdmin" class="input-field">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="subscription">Subsription</label>
+                                                    <input type="checkbox" id="isSubscribed" class="input-field">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

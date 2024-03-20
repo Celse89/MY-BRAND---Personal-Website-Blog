@@ -1,6 +1,7 @@
 const MESSAGE_API_URL = 'http://localhost:5500/api/messages';
 
 document.addEventListener('DOMContentLoaded', function() {
+    const token = localStorage.getItem('token');
     document.querySelector('form').addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -27,9 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}` 
                 },
                 body: JSON.stringify(contactData),
-                credentials: 'include',
+               
             })
             .then(response => {
                 if (!response.ok) {
@@ -43,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('messageSuccess').innerHTML = '<i class="fas fa-check"></i> Sent successful!';
           
                 setTimeout(() => {
-                    window.location.href = '/templates/index.html';
+                    window.location.href = '/templates/portifolio.html';
                 }, 3000);
             })
             .catch(error => {

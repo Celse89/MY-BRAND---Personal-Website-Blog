@@ -1,20 +1,13 @@
 const LOGIN_API_URL = 'http://localhost:5500/api/auth/login';
-const AUTH_API_URL = 'http://localhost:5500/api/auth/checkToken';
 
 document.addEventListener('DOMContentLoaded', function () {
-    fetch(AUTH_API_URL, {
-        method: 'GET',
-        credentials: 'include',
-    })
-        .then(res => res.json())
-        .then(data => {
-            if (data.isLoggedIn) {
-                localStorage.setItem('isLoggedIn', 'true');
-            } else {
-                localStorage.setItem('isLoggedIn', 'false');
-            }
-        })
-        .catch(error => console.error('Error:', error));
+    const token = localStorage.getItem('token');
+
+    if (token) {
+        localStorage.setItem('isLoggedIn', 'true');
+    } else {
+        localStorage.setItem('isLoggedIn', 'false');
+    }
 
     document.getElementById('loginButton').addEventListener('click', function (event) {
         event.preventDefault();
@@ -40,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(userData),
-                credentials: 'include',
             })
             .then(response => {
                 if (!response.ok) {
@@ -51,13 +43,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 return response.json();
             })
             .then(data => {
-                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('token', data.token);
                 document.getElementById('loginSuccess').innerHTML = '<i class="fas fa-check"></i> Login successful!';
                 document.getElementById('loginError').innerHTML = '';
                 document.getElementById('login').style.display = 'none';
                 document.getElementById('userMenu').style.display = 'block';
                 setTimeout(() => {
-                    window.location.href = '/templates/index.html';
+                    window.location.href = '/templates/blogs.html';
                 }, 3000);
             })
             .catch(error => {
