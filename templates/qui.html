@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      #editor-container {
+        height: 375px;
+      }
+    </style>
+    <link href="//cdn.quilljs.com/1.0.3/quill.snow.css" rel="stylesheet" type="text/css" />    
+    <script src="//cdn.quilljs.com/1.0.3/quill.js"></script>
+</head>
+<body>
+    <div id="editor-container"></div>
+    <script>
+      var quill = new Quill('#editor-container', {
+        modules: {
+          toolbar: [
+            ['link']
+          ]
+        },
+        theme: 'snow'
+      });
+    </script>
+</body>
+</html>
