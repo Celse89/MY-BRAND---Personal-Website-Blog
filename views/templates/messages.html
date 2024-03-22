@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/dashboard-header.css">
+    
     <link rel="stylesheet" href="/styles/messages.css">
+    <link rel="stylesheet" href="/styles/dashboard-header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -60,7 +61,7 @@
                     </a>
                 </li>
                 <li class="nav-item logout-item">
-                    <a class="nav-link large-font logout-button" href="/logout">
+                    <a id="logoutLink" class="nav-link large-font logout-button" href="/logout">
                         <i class="fas fa-sign-out-alt fa-lg"></i> Logout
                     </a>
                 </li>
@@ -79,7 +80,7 @@
                     <a href="#" class="btn btn-light mr-1" style="background-color: #f5f5f5; border: none;">
                         <i class="fas fa-bell"></i>
                     </a>
-                    <span class="badge badge-danger" style="position: absolute; top: 0; right: 0px; font-size: 0.65em;">4</span>
+                    <span class="badge badge-danger highlight-messages" style="position: absolute; top: 0; right: 0px; font-size: 0.65em;">4</span>
                 </div>
                 <div class="dropdown no-shadow">
                     <a class="dropdown-toggle text-dark" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #f5f5f5; border: none;">
@@ -107,6 +108,9 @@
     
     
     <script src="/static/getAllMessages.js"></script>
+    <script src="/static/logout.js"></script>
+    <script src="/static/retrieve-messages.js" defer></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

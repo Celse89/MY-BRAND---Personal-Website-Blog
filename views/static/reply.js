@@ -51,7 +51,7 @@ var quill = new Quill('#editor', {
 
 
 
-const BASE_URL = 'http://localhost:5500/api/messages';
+const BASE_URL = 'https://my-brand-personal-website-blog-back-end.onrender.com/api/messages';
 
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -1,4 +1,4 @@
-const MESSAGE_API_URL = 'http://localhost:5500/api/messages';
+const MESSAGE_API_URL = 'https://my-brand-personal-website-blog-back-end.onrender.com/api/messages';
 
 document.addEventListener('DOMContentLoaded', function() {
     let token = localStorage.getItem('token');
@@ -18,7 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return response.json();
     })
     .then(data => {
-        document.querySelector('.highlight-messages').textContent = data.data.length;
+        let messageElements = document.querySelectorAll('.highlight-messages');
+        messageElements.forEach(element => {
+            element.textContent = data.data.length;
+        });
     })
     .catch(error => {
         console.error('Error:', error);

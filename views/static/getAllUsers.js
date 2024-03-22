@@ -1,4 +1,4 @@
-const USERS_API_URL = 'http://localhost:5500/api/users';
+const USERS_API_URL = 'https://my-brand-personal-website-blog-back-end.onrender.com/api/users';
 let currentUserId;
 let allUsers = [];
 
@@ -183,6 +183,11 @@ function updateUser(userId, userData) {
 
 function deleteUser(userId) {
     let token = localStorage.getItem('token');
+    let confirmation = confirm('Are you sure you want to delete this user?');
+    if (!confirmation) {
+        return; // If the user clicks 'Cancel', do nothing
+    }
+
 
     fetch(`${USERS_API_URL}/${userId}`, {
         method: 'DELETE',

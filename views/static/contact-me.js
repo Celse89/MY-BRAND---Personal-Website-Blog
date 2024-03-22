@@ -1,4 +1,4 @@
-const MESSAGE_API_URL = 'http://localhost:5500/api/messages';
+const MESSAGE_API_URL = 'https://my-brand-personal-website-blog-back-end.onrender.com/api/messages';
 
 document.addEventListener('DOMContentLoaded', function() {
     const token = localStorage.getItem('token');

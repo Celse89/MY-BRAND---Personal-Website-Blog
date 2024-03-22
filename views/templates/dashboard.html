@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/dashboard-header.css">
+   
     <link rel="stylesheet" href="/styles/dashboard.css">
+    <link rel="stylesheet" href="/styles/dashboard-header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -77,10 +78,10 @@
                     <i class="fas fa-moon"></i>
                 </a>
                 <div style="position: relative; margin-right: 5px;">
-                    <a href="#" class="btn btn-light mr-1" style="background-color: #f5f5f5; border: none;">
+                    <a href="/templates/messages.html" class="btn btn-light mr-1" style="background-color: #f5f5f5; border: none;">
                         <i class="fas fa-bell"></i>
                     </a>
-                    <span class="badge badge-danger" style="position: absolute; top: 0; right: 0px; font-size: 0.65em;">4</span>
+                    <span class="badge badge-danger highlight-messages" style="position: absolute; top: 0; right: 0px; font-size: 0.65em; ">4</span>
                 </div>
                 <div class="dropdown no-shadow">
                     <a class="dropdown-toggle text-dark" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #f5f5f5; border: none;">
@@ -88,7 +89,7 @@
                         <span style="font-weight: bold;">Celse Honore</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="margin-top: 15px;">
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a id="logoutLink" class="dropdown-item" href="#">Logout</a>
                     </div>
                 </div>
             </div>
@@ -206,34 +207,9 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div id="recent-blogs" class="card">
                     <div class="card-header"><i class="fas fa-blog"></i> Recent Blog Updates</div>
-                    <div class="card-body">
-                        <div class="media">
-                            <img src="/images/elon-profile.jpg" class="mr-3" alt="Post 1">
-                            <div class="media-body">
-                                <h5 class="mt-0">Understanding AI</h5>
-                                <p><span class="author">By Celse Honore RUGIRA</span></p>
-                                <div class="blog-time">
-                                    <p><i class="far fa-clock mr-1"></i><span>February 2, 2024</span></p>
-                                </div>
-                                <a href="/blog/" class="btn btn-primary read-more">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="media">
-                            <img src="/images/elon-profile.jpg" class="mr-3" alt="Post 1">
-                            <div class="media-body">
-                                <h5 class="mt-0">The Future of Tech</h5>
-                                <p><span class="author">By Celse Honore RUGIRA</span></p>
-                                <div class="blog-time">
-                                    <p><i class="far fa-clock mr-1"></i><span>February 2, 2024</span></p>
-                                </div>
-                                <a href="/blog/" class="btn btn-primary read-more">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -243,10 +219,13 @@
     <script src="/static/retrieve-messages.js" defer></script>
     <script src="/static/retrieve-blogs.js" defer></script>
     <script src="/static/logout.js" defer></script>
+    <script src="/static/recent-blogs.js" defer></script>
    
     
     
     <!-- <script src="/static/retrieve-blogs.js" -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 </body>

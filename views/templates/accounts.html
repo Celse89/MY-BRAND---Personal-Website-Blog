@@ -1,102 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/dashboard-header.css">
+    
     <link rel="stylesheet" href="/styles/accounts.css">
-
+    <link rel="stylesheet" href="/styles/dashboard-header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Accounts</title>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand mt-2" href="/templates/index.html"><i class="fas fa-home fa-lg home-icon"></i>Go to home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse custom-nav" id="navbarNav">
-        <ul class="navbar-nav mt-2">
-            <li class="nav-item active">
-                <a class="nav-link large-font" href="/templates/dashboard.html">
-                    <svg width="1.333em" height="1.333em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                        fill="none" style="vertical-align: middle;">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path stroke="#f5f5f5" stroke-width="2"
-                                d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5ZM14 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5ZM4 16a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3ZM14 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-6Z">
-                            </path>
-                        </g>
-                    </svg>
-                    <span class="text">Dashboard</span> <span class="sr-only">(current)</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link large-font" href="/templates/dashboard-blog.html"><i
-                        class="fas fa-blog fa-lg"></i> Blogs</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link large-font" href="/templates/messages.html"><i class="fas fa-envelope fa-lg"></i>
-                    Messages</a>
-            </li>
-            <li class="nav-item">
-                <hr class="custom-hr">
-            </li>
-            <li class="nav-item">
-                <p class="nav-heading">Users & Settings</p>
-            </li>
-            <li class="nav-item add-margin-top">
-                <a class="nav-link large-font" href="/templates/users.html"><i class="fas fa-users fa-lg"></i>
-                    Users</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link large-font" href="/templates/accounts.html"><i class="fas fa-cog fa-lg"></i>
-                    Setting
-                </a>
-            </li>
-            <li class="nav-item logout-item">
-                <a class="nav-link large-font logout-button" href="/logout">
-                    <i class="fas fa-sign-out-alt fa-lg"></i> Logout
-                </a>
-            </li>
-        </ul>
-    </div>
-</nav>
 
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div class="accounts-dashboard">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand mt-2" href="/templates/index.html"><i class="fas fa-home fa-lg home-icon"></i>Go to
+            home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse custom-nav" id="navbarNav">
+            <ul class="navbar-nav mt-2">
+                <li class="nav-item active">
+                    <a class="nav-link large-font" href="/templates/dashboard.html">
+                        <svg width="1.333em" height="1.333em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" style="vertical-align: middle;">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path stroke="#f5f5f5" stroke-width="2"
+                                    d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5ZM14 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5ZM4 16a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3ZM14 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-6Z">
+                                </path>
+                            </g>
+                        </svg>
+                        <span class="text">Dashboard</span> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link large-font" href="/templates/dashboard-blog.html"><i
+                            class="fas fa-blog fa-lg"></i> Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link large-font" href="/templates/messages.html"><i class="fas fa-envelope fa-lg"></i>
+                        Messages</a>
+                </li>
+                <li class="nav-item">
+                    <hr class="custom-hr">
+                </li>
+                <li class="nav-item">
+                    <p class="nav-heading">Users & Settings</p>
+                </li>
+                <li class="nav-item add-margin-top">
+                    <a class="nav-link large-font" href="/templates/users.html"><i class="fas fa-users fa-lg"></i>
+                        Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link large-font" href="/templates/accounts.html"><i class="fas fa-cog fa-lg"></i>
+                        Setting
+                    </a>
+                </li>
+                <li class="nav-item logout-item">
+                    <a class="nav-link large-font logout-button" href="/logout">
+                        <i class="fas fa-sign-out-alt fa-lg"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="editProifle mt-4">
+            <h5 id="">Edit Profile</h5>
             
-            <div class="accounts-change">
+            
+        </div>
+        <form id="editForm2">
+            <div class="editHeader mt-4">
+                <i class="fas fa-user-circle fa-3x"> 
+                    <p style="font-size: 1.2rem; margin-top: 13px;" id="displayUsername"></p>
+                </i> 
                 <div class="profile-image-upload">
-                    <img src="/assets/account-circle-svgrepo-com.svg" alt="Profile Image">
-                    <label for="imageUpload" class="image-upload-button">Upload Image</label>
+                    <label for="imageUpload" class="image-upload-button">
+                        <i class="fas fa-user"></i> Upload Image
+                    </label>
                     <input type="file" id="imageUpload" name="imageUpload" style="display: none;">
                 </div>
-                <h3>User</h3>
-                <div class="username-change">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username">
-                </div>
-                <div class="email-change">
-                    <label for="email">Change Email</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="password-change">
-                    <label for="password">Change Password</label>
-                    <input type="password" id="password" name="password">
-                </div>
-                <div class="buttons">
-                    <button type="submit">Save</button>
-                    <button type="reset">Cancel</button>
-                </div>
             </div>
+            
+        </form>
+        
+        
+        <form id="editForm">
+            <section>
+                <input type="text" id="username" name="username" placeholder="Change Username">
+                <input type="email" id="email" name="email" placeholder="Change Email">
+                <section class="button-section">
+                    <button id="updateButton" type="submit">Update</button>
+                    <button id="cancelButton" type="button">Cancel</button>
+                </section>
+                <input type="password" id="currentPassword" name="currentPassword" placeholder="Current Password">
+                <input type="password" id="newPassword" name="newPassword"  placeholder="New Password">
+            </section>
+            <section>
+                <section class="button-section">
+                    <button id="updatePasswordButton"  type="submit">Update</button>
+                    <button id="cancelPasswordButton" type="button">Cancel</button>
+                </section>
+                
+            </section>
            
-        </div>
-    </main>
+        </form>
+    </div>
+    <script  src="/static/editUser.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>

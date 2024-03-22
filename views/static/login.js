@@ -1,4 +1,4 @@
-const LOGIN_API_URL = 'http://localhost:5500/api/auth/login';
+const LOGIN_API_URL = 'https://my-brand-personal-website-blog-back-end.onrender.com/api/auth/login';
 
 document.addEventListener('DOMContentLoaded', function () {
     const token = localStorage.getItem('token');
@@ -43,7 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 return response.json();
             })
             .then(data => {
+                console.log('Success:', data);
                 localStorage.setItem('token', data.token);
+                localStorage.setItem('userId', data.userId);
+                localStorage.setItem('isAdmin', data.isAdmin);
                 document.getElementById('loginSuccess').innerHTML = '<i class="fas fa-check"></i> Login successful!';
                 document.getElementById('loginError').innerHTML = '';
                 document.getElementById('login').style.display = 'none';

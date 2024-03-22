@@ -1,4 +1,4 @@
-const USERS_API_URL = 'http://localhost:5500/api/users';
+const USERS_API_URL = 'https://my-brand-personal-website-blog-back-end.onrender.com/api/users';
 
 function handleResponse(response) {
     console.log('Response:', response); // Log the response

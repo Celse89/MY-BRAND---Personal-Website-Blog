@@ -1,4 +1,4 @@
-const SIGNUP_API_URL = 'http://localhost:5500/api/auth/signup';
+const SIGNUP_API_URL = 'https://my-brand-personal-website-blog-back-end.onrender.com/api/auth/signup';
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('signupButton').addEventListener('click', function(event) {
         event.preventDefault();

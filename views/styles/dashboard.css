@@ -163,9 +163,10 @@
 }
 
 
-@media (max-width: 576px) {
-
-  body {
-    flex-direction: column;
+@media (max-width: 992px) {
+  .activity-text {
+    white-space: normal;
   }
 }
+
+

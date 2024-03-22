@@ -44,14 +44,14 @@
                 </li>
                 <!-- Authenticated users see this -->
                 <li class="nav-item dropdown" id="userMenu" style="display: none;">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Menu
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/templates/dashboard.html">Dashboard</a>
-                        <a class="dropdown-item" href="/templates/logout.html">Logout</a>
-                    </div>
-                </li>
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-user"></i>  <!-- Font Awesome user icon -->
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a id="dashboardLink" class="dropdown-item" href="/templates/dashboard.html">Dashboard</a>
+                      <a id="logoutLink" class="dropdown-item" href="/templates/logout.html">Logout</a>
+                  </div>
+              </li>
             </ul>
         </div>
     </nav>

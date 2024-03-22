@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const USERS_API_URL = 'http://localhost:5500/api/users';
+    const USERS_API_URL = 'https://my-brand-personal-website-blog-back-end.onrender.com/api/users';
 
     document.querySelector('.subscribe-form form').addEventListener('submit', function(event) {
         event.preventDefault();
@@ -8,32 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = emailInput.value;
 
         if (!email) {
-            document.querySelector('#subscribeEmailError').textContent = 'Email is required';
+            document.querySelector('#subscribeEmailError').innerHTML = 'Email is required';
             return;
         }
 
         const token = localStorage.getItem('token');
+        const userId = localStorage.getItem('userId');
 
-        fetch(`${USERS_API_URL}/email?email=${encodeURIComponent(email)}`, {
+        fetch(`${USERS_API_URL}/${userId}/subscription`, {
+            method: 'PUT',
             headers: {
+                'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
-            }
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            return fetch(`${USERS_API_URL}/${data.data._id}/subscription`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
-                },
-                body: JSON.stringify({ subscribed: true })
-            });
+            },
+            body: JSON.stringify({ subscribed: true })
         })
         .then(response => {
             if (!response.ok) {

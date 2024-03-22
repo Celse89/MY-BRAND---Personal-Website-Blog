@@ -1,8 +1,8 @@
-const MESSAGE_API_URL = 'http://localhost:5500/api/messages';
+const MESSAGE = 'https://my-brand-personal-website-blog-back-end.onrender.com/api/messages';
 
 document.addEventListener('DOMContentLoaded', function () {
     const token = localStorage.getItem('token');
-    fetch(MESSAGE_API_URL, {
+    fetch(MESSAGE, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

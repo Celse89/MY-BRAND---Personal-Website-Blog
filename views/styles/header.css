@@ -130,3 +130,13 @@
         padding: 0rem 0;
     }
 }
+
+
+#login, #userMenu {
+    display: none;
+}
+
+
+#dashboardLink {
+    display: none;
+}

@@ -248,6 +248,16 @@ p {
     align-items: center;
 }
 
+.project-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    margin: 40px 0; 
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+
 
 
 

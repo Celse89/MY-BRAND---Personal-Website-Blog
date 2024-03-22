@@ -1,6 +1,6 @@
 let message;
 
-const BASE_URL = 'http://localhost:5500/api/messages';
+const BASE_URL = 'https://my-brand-personal-website-blog-back-end.onrender.com/api/messages';
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -91,12 +91,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     sendButton.addEventListener('click', function (event) {
         event.preventDefault();
-
+    
         const replyContent = editor.value;
         
+        // Show loading message
+        sendButton.textContent = 'Loading...';
+        sendButton.disabled = true;
+    
         fetch(`${BASE_URL}/${messageId}/reply`, {
             method: 'POST',
-            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}` 
@@ -111,10 +114,18 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then((data) => {
             editor.value = '';
-            alert('Reply sent successfully!');
+            sendButton.textContent = 'Success';
+            sendButton.style.backgroundColor = 'green';
+            setTimeout(function() {
+                location.reload();
+            }, 2000);
         })
         .catch((error) => {
             console.error('There has been a problem with your fetch operation:', error);
+            // Reset button state in case of error
+            sendButton.textContent = 'Send';
+            sendButton.style.backgroundColor = '';
+            sendButton.disabled = false;
         });
     });
 });

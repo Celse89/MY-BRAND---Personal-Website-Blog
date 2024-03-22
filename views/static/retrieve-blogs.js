@@ -1,4 +1,4 @@
-const BLOGS_API_URL = 'http://localhost:5500/api/blogs';
+const BLOGS_API_URL = 'https://my-brand-personal-website-blog-back-end.onrender.com/api/blogs';
 
 document.addEventListener('DOMContentLoaded', function() {
     let token = localStorage.getItem('token');
